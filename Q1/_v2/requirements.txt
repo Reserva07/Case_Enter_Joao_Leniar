@@ -1,0 +1,6 @@
+pymupdf==1.28.2
+numpy==2.5.4
+matplotlib==3.11.2
+jupyter==1.1.1
+# opcional (caminho de produção da §6, não executado): sentence-transformers
+# testado com Python 3.14

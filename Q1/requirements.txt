@@ -1,0 +1,7 @@
+pymupdf==1.28.2
+numpy==2.5.4
+matplotlib==3.11.2
+jupyter==1.1.1
+sentence-transformers==6.1.0
+torch==2.14.1
+# testado com Python 3.14; modelo de embedding: sentence-transformers/paraphrase-multilingual-mpnet-base-v2 (baixado na primeira execução)

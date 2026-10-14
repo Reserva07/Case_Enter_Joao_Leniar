@@ -1,0 +1,8 @@
+pymupdf==1.28.2
+numpy==2.5.4
+scipy==1.18.1
+pydantic==2.14.1
+matplotlib==3.11.2
+jupyter==1.1.1
+# opcional, só para a chamada real ao modelo: anthropic
+# testado com Python 3.14

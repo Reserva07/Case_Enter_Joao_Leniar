@@ -1,0 +1,125 @@
+{
+  "_descricao": "Paráfrases fixas (escritas uma vez por um LLM) das peças de frase do gerador de fatos. Uma reescrita troca cada peça pela paráfrase e muda a ordem da frase, mantendo os mesmos fatos (datas, valores, nomes, números).",
+  "estruturas": [
+    "{Detalhe}, {sujeito} {verbo} {objeto} {complemento}.",
+    "{Sujeito} {verbo} {objeto} {complemento}, {detalhe}."
+  ],
+  "detalhes": {
+    "em {data}": "na data de {data}",
+    "no dia {data}": "na data de {data}",
+    "por volta das {h}h{m:02d} de {data}": "em {data}, aproximadamente às {h}h{m:02d}",
+    "na Rua {rua}, nº {n}": "no endereço da Rua {rua}, número {n}",
+    "conforme e-mail de {data}": "como consta da mensagem eletrônica de {data}",
+    "na presença de {pessoa}": "diante de {pessoa}",
+    "segundo relato de {pessoa}": "de acordo com o que contou {pessoa}",
+    "pelo protocolo {num}": "sob o protocolo de número {num}",
+    "após {n} dias de espera": "depois de esperar {n} dias",
+    "na unidade {num}": "no estabelecimento de número {num}"
+  },
+  "verbos": {
+    "realizou": "executou", "concluiu": "finalizou", "comprovou": "demonstrou", "apresentou": "exibiu", "enviou": "encaminhou",
+    "recebeu": "obteve", "reconheceu": "admitiu", "registrou": "documentou", "aprovou": "autorizou", "efetuou": "fez",
+    "acompanhou": "supervisionou", "validou": "confirmou", "cancelou": "anulou", "cobrou": "faturou", "negou": "recusou",
+    "estornou": "reverteu", "cumpriu": "observou", "exigiu": "impôs", "pagou": "quitou", "assinou": "firmou", "anotou": "lançou",
+    "devolveu": "restituiu", "notificou": "comunicou"
+  },
+  "areas": {
+    "serviços": {
+      "sujeito": {
+        "A autora": "A requerente", "A contratada": "A empresa contratada", "A equipe técnica da autora": "Os técnicos da requerente",
+        "O responsável técnico": "O técnico encarregado", "A prestadora": "A empresa prestadora", "O encarregado da obra": "O chefe da obra",
+        "O síndico do edifício": "O síndico do prédio", "O gerente da ré": "O gerente da requerida", "O preposto da ré": "O representante da requerida",
+        "A fiscalização da ré": "Os fiscais da requerida", "O engenheiro responsável": "O engenheiro encarregado", "A coordenação do contrato": "Os coordenadores do contrato"
+      },
+      "objeto": {
+        "a troca das bombas hidráulicas": "a substituição das bombas d'água", "a revisão do quadro elétrico": "a inspeção do painel de energia",
+        "a pintura das áreas comuns": "a repintura dos espaços de uso comum", "a substituição dos elevadores": "a troca dos elevadores antigos por novos",
+        "a impermeabilização da cobertura": "a vedação do telhado contra infiltrações", "o reparo da rede de esgoto": "o conserto da tubulação sanitária",
+        "a manutenção do sistema de incêndio": "a conservação dos equipamentos de combate a incêndio", "a instalação das câmeras": "a montagem do circuito de câmeras de segurança",
+        "o relatório de execução": "o documento que descreve os serviços executados", "a medição mensal dos serviços": "a aferição mensal do que foi feito",
+        "a nota fiscal de serviços": "o documento fiscal referente aos serviços", "o termo de aceite parcial": "o aceite provisório por escrito"
+      },
+      "complemento": {
+        "na unidade comercial {n}": "na sala comercial de número {n}", "no bloco {letra} do edifício": "na torre {letra} do prédio",
+        "conforme ordem de serviço nº {num}": "nos termos da OS {num}", "dentro do prazo do cronograma": "sem atrasar o calendário previsto",
+        "com acompanhamento do síndico": "sob supervisão do síndico", "após a vistoria técnica": "depois da inspeção feita pelos técnicos",
+        "segundo o laudo de {data}": "como atesta o laudo datado de {data}", "mediante protocolo nº {num}": "com o protocolo de número {num}",
+        "no valor de {valor}": "pela quantia de {valor}", "com prazo de garantia de {n} meses": "garantido por {n} meses",
+        "sem qualquer ressalva formal": "sem nenhuma objeção por escrito", "com registro fotográfico datado": "documentado em fotos com data"
+      }
+    },
+    "consumo": {
+      "sujeito": {
+        "O autor": "O requerente", "A consumidora": "A cliente", "A central de atendimento": "O call center",
+        "O atendente da ré": "O funcionário do atendimento da requerida", "A operadora": "A empresa de telefonia", "O fornecedor": "A empresa fornecedora",
+        "O setor de cobrança da ré": "O departamento de cobranças da requerida", "A ouvidoria da ré": "O canal de ouvidoria da requerida",
+        "O técnico credenciado": "O técnico autorizado", "A instituição financeira": "O banco", "O vendedor da loja": "O funcionário de vendas do estabelecimento",
+        "A transportadora": "A empresa de entregas"
+      },
+      "objeto": {
+        "a cobrança do pacote adicional": "o débito referente ao plano extra", "o cancelamento da linha telefônica": "o encerramento do número de telefone",
+        "a entrega do produto adquirido": "o envio da mercadoria comprada", "a troca do aparelho defeituoso": "a substituição do equipamento com defeito",
+        "o estorno das parcelas indevidas": "a devolução das prestações cobradas sem causa", "a reclamação formal da consumidora": "a queixa registrada oficialmente pela cliente",
+        "a fatura com lançamentos desconhecidos": "a conta mensal com cobranças não reconhecidas", "o contrato de adesão": "o instrumento contratual padronizado",
+        "o pedido de portabilidade": "a solicitação de transferência de operadora", "a negativação do nome do autor": "a inclusão do requerente nos cadastros de inadimplentes",
+        "o reparo em garantia": "o conserto coberto pela garantia", "a oferta anunciada no site": "a promoção divulgada na página da internet"
+      },
+      "complemento": {
+        "no protocolo de atendimento nº {num}": "sob o número de atendimento {num}", "em {data}": "na data de {data}",
+        "no valor de {valor}": "pela quantia de {valor}", "após {n} tentativas de contato": "depois de {n} contatos sem sucesso",
+        "sem autorização expressa": "sem que houvesse consentimento claro", "conforme gravação da ligação": "como mostra o áudio da chamada",
+        "dentro do prazo de garantia": "ainda no período coberto pela garantia", "segundo a nota fiscal nº {num}": "de acordo com o cupom fiscal {num}",
+        "por meio do aplicativo": "pelo app do celular", "na loja da cidade de {cidade}": "no estabelecimento situado em {cidade}",
+        "com cobrança de multa de {valor}": "exigindo multa de {valor}", "sem resposta da ouvidoria": "sem retorno do canal de ouvidoria"
+      }
+    },
+    "trabalhista": {
+      "sujeito": {
+        "O reclamante": "O trabalhador", "A reclamante": "A trabalhadora", "O supervisor imediato": "O chefe direto",
+        "A empresa reclamada": "A companhia demandada", "O setor de recursos humanos": "O departamento de pessoal", "O gerente da filial": "O gestor da unidade",
+        "A testemunha indicada": "A pessoa arrolada como testemunha", "O coordenador de turno": "O líder do turno", "A empregadora": "A empresa contratante",
+        "O sindicato da categoria": "A entidade sindical", "O médico do trabalho": "O médico da empresa", "O encarregado do setor": "O responsável pelo setor"
+      },
+      "objeto": {
+        "a jornada de doze horas diárias": "um expediente de doze horas por dia", "as horas extras habituais": "o trabalho extraordinário frequente",
+        "o intervalo intrajornada reduzido": "a pausa para refeição encurtada", "o adicional de insalubridade": "o acréscimo salarial por trabalho insalubre",
+        "as verbas rescisórias": "os valores devidos na rescisão", "o depósito do FGTS": "o recolhimento do fundo de garantia",
+        "o aviso prévio indenizado": "o aviso prévio pago sem trabalho", "as metas abusivas de vendas": "objetivos comerciais excessivos",
+        "o controle de ponto britânico": "registros de horário sempre idênticos", "a dispensa sem justa causa": "a demissão imotivada",
+        "o atestado médico": "o documento do médico que justificava a ausência", "a transferência de unidade": "a mudança de local de trabalho"
+      },
+      "complemento": {
+        "entre {data} e {data2}": "no período de {data} a {data2}", "na filial de {cidade}": "na unidade localizada em {cidade}",
+        "conforme cartões de ponto": "como provam os registros de horário", "sem pagamento correspondente": "sem a devida remuneração",
+        "no valor de {valor}": "pela quantia de {valor}", "durante {n} meses consecutivos": "por {n} meses seguidos",
+        "segundo o contracheque de {data}": "como mostra o holerite de {data}", "conforme convenção coletiva": "nos termos do acordo da categoria",
+        "por determinação da gerência": "por ordem dos gestores", "sem anotação na carteira": "sem registro na CTPS",
+        "com aviso de {n} dias": "com antecedência de {n} dias", "mediante recibo nº {num}": "com o comprovante de número {num}"
+      }
+    },
+    "locação": {
+      "sujeito": {
+        "O locador": "O dono do imóvel", "A locatária": "A inquilina", "A administradora do imóvel": "A empresa que administra o imóvel",
+        "O fiador": "O garantidor do contrato", "O vistoriador": "O responsável pela vistoria", "O corretor responsável": "O corretor encarregado",
+        "A imobiliária": "A corretora de imóveis", "O condomínio": "A administração do condomínio", "O inquilino": "O locatário",
+        "A proprietária": "A dona do imóvel", "O avaliador contratado": "O perito avaliador", "O síndico": "O administrador do prédio"
+      },
+      "objeto": {
+        "o contrato de locação residencial": "o acordo de aluguel da residência", "os aluguéis vencidos": "as mensalidades de aluguel em atraso",
+        "a vistoria de entrada": "a inspeção inicial do imóvel", "as chaves do imóvel": "as chaves da casa", "o depósito caução": "a garantia em dinheiro",
+        "a notificação extrajudicial": "o aviso formal fora do processo", "o reajuste anual do aluguel": "a correção anual do valor locatício",
+        "as cotas condominiais": "as taxas de condomínio", "o laudo de vistoria de saída": "o relatório da inspeção final",
+        "a multa contratual": "a penalidade prevista no contrato", "o seguro fiança": "a apólice de garantia locatícia",
+        "o termo de entrega das chaves": "o documento de devolução das chaves"
+      },
+      "complemento": {
+        "em {data}": "na data de {data}", "no valor de {valor}": "pela quantia de {valor}",
+        "referente ao imóvel da rua {num}": "relativo ao imóvel situado no número {num}", "conforme cláusula {n} do contrato": "nos termos da cláusula {n} contratual",
+        "com prazo de {n} dias": "para cumprimento em {n} dias", "por meio da administradora": "por intermédio da empresa administradora",
+        "sem qualquer justificativa": "sem apresentar motivo algum", "segundo recibo nº {num}": "conforme o comprovante {num}",
+        "na cidade de {cidade}": "no município de {cidade}", "após {n} meses de atraso": "depois de {n} meses sem pagar",
+        "com registro em cartório": "registrado em cartório de notas", "acompanhado de fotografias": "instruído com fotos"
+      }
+    }
+  }
+}
