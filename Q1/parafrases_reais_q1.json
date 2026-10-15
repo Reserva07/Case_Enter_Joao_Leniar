@@ -1,0 +1,877 @@
+{
+ "_descricao": "Paráfrases de parágrafos de texto próprio das sentenças de sentencas_tjsp.json (sentenças de teste, fora do histórico): os mesmos fatos, valores, datas, nomes e citações, com outras palavras e outra ordem. Escritas uma vez por um LLM; ficam fixas. Ementas e transcrições não foram parafraseadas (quem reescreve a própria peça não reescreve a ementa citada). papel = calibracao (cortes de cosseno) ou teste (reescritas reais da §10.6), separados por sentença.",
+ "itens": [
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 14,
+   "original": "A ré foi contratada pelo autor para a prestação de serviços de administração imobiliária. Conforme jurisprudência do C. Superior Tribunal de Justiça, a relação entre locador, locatário e administradora imobiliária é considerada uma relação de consumo. Nesse contexto, o contrato de administração imobiliária deve ser analisado em sua plenitude, envolvendo a prestação de serviços nas quais as partes do contrato de locação são consideradas destinatárias finais, ou seja, consumidores:",
+   "parafrase": "O autor contratou a ré para administrar seu imóvel. O C. Superior Tribunal de Justiça entende que a relação que envolve locador, locatário e administradora imobiliária é de consumo. Assim, o contrato de administração imobiliária deve ser examinado por inteiro, já que as partes da locação são destinatárias finais dos serviços prestados, isto é, consumidores:"
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 18,
+   "original": "Diante da impossibilidade do demandante em produzir prova de fato negativo, cabia à ré demonstrar que efetuou o repasse dos impostos ao Município, o que não ocorreu. A ausência de pagamento efetivo dos valores referentes ao IPTU foi atestada pela Secretaria de Finanças da Prefeitura do Município de Osasco (fls. 64) e posteriormente confirmada através da resposta de ofício judicial ofertada pelo Banco Itaú (fls. 145/146), instituição a que é vinculada a conta pertencente à demandada da qual supostamente teriam saído os valores.",
+   "parafrase": "Como não se pode exigir do demandante prova de fato negativo, competia à ré comprovar o repasse dos impostos ao Município, e ela não o fez. A Secretaria de Finanças da Prefeitura do Município de Osasco atestou que o IPTU não foi efetivamente pago (fls. 64), o que a resposta do Banco Itaú ao ofício judicial confirmou depois (fls. 145/146); é nesse banco que fica a conta da demandada de onde os valores supostamente teriam saído."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 19,
+   "original": "A resposta ao ofício em questão indica que o banco não identificou os débitos nos valores de R$ 4.860,10 em 15/10/2020 e R$ 3.647,08 em 12/02/2021 na conta nº 0551/13635-1, que seriam justamente as quantias que a ré afirma ter adimplido. Tal fato resultou na inadimplência dos tributos devidos, gerando um ônus financeiro significativo ao requerente.",
+   "parafrase": "Segundo a resposta ao ofício, o banco não localizou na conta nº 0551/13635-1 os débitos de R$ 4.860,10 em 15/10/2020 e de R$ 3.647,08 em 12/02/2021, justamente as quantias que a ré diz ter pago. Por isso os tributos ficaram inadimplidos, o que trouxe ao requerente um ônus financeiro considerável."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 20,
+   "original": "Destarte, a confiança depositada pelo suplicante na requerida para gerenciar as questões relacionadas à locação do imóvel foi abalada pela falta de diligência demonstrada pela administradora. E constatada falha na prestação do serviço, a parte contratada assume a responsabilidade pelos danos causados ao consumidor, independentemente de prova de culpa, conforme estipula o art. 14 do Código de Defesa do Consumidor. Assim sendo, o afastamento da responsabilidade somente poderá ocorrer mediante a comprovação da inexistência de defeito, na hipótese de o serviço ter sido prestado de maneira adequada, ou ainda em caso de culpa exclusiva do consumidor ou de terceiro, circunstâncias que não foram demonstradas no caso sub judice.",
+   "parafrase": "A falta de diligência da administradora abalou a confiança que o suplicante havia depositado na requerida para cuidar da locação do imóvel. Verificada a falha do serviço, a contratada responde pelos danos causados ao consumidor sem necessidade de prova de culpa, como prevê o art. 14 do Código de Defesa do Consumidor. Essa responsabilidade só seria afastada se provada a inexistência de defeito, por ter sido o serviço prestado adequadamente, ou a culpa exclusiva do consumidor ou de terceiro, nada disso demonstrado no caso sub judice."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 21,
+   "original": "Diante disso, o autor faz jus ao ressarcimento dos danos materiais suportados. O demandante, mesmo tendo contratado a requerida para cuidar desse aspecto, assumiu integralmente a responsabilidade ao efetuar o parcelamento dos tributos referentes ao IPTU junto à prefeitura, sendo que a administradora ré já havia recebido os valores do locatário correspondentes ao pagamento deste encargo e não os empregou no seu adimplemento.",
+   "parafrase": "Por isso, o autor tem direito a ser ressarcido dos danos materiais que sofreu. Embora tivesse contratado a requerida justamente para isso, o demandante acabou assumindo toda a responsabilidade ao parcelar o IPTU junto à prefeitura, quando a administradora já tinha recebido do locatário os valores destinados a esse encargo e não os usou para quitá-lo."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 22,
+   "original": "Todavia , entendo que é inaplicável ao caso o artigo 42 do CDC, tendo em vista que a cobrança do IPTU tenha sido originada da desídia da ré , não foi por esta perpetrada o que afasta a incidência do referido dispositivo legal.",
+   "parafrase": "Entendo, porém, que o artigo 42 do CDC não se aplica ao caso: ainda que a cobrança do IPTU tenha decorrido da desídia da ré, não foi ela quem a fez, o que afasta o dispositivo."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 23,
+   "original": "Ainda assim, conforme o demonstrativo de fls. 68, o saldo devedor referente ao IPTU do ano de 2019 totaliza R$ 5.155,23, enquanto o saldo devedor do IPTU de 2020 é de R$ 4.673,74. Tais valores ainda foram acrescidos de R$ 982,89 a título de honorários advocatícios. A soma total dos valores devidos é de R$ 10.811,86. Consequentemente, faz jus o autor ao ressarcimento do referido montante.",
+   "parafrase": "De todo modo, o demonstrativo de fls. 68 mostra saldo devedor de R$ 5.155,23 do IPTU de 2019 e de R$ 4.673,74 do IPTU de 2020, aos quais se somaram R$ 982,89 de honorários advocatícios, num total de R$ 10.811,86. O autor faz jus, portanto, ao ressarcimento desse montante."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 24,
+   "original": "De igual modo, o pedido de indenização por danos morais deve prosperar. A situação retratada nos autos afetou a integridade emocional do demandante, considerando a angústia e desgaste decorrentes da inscrição de seu nome em dívida ativa. A ação desidiosa da imobiliária, ao deixar de efetuar o pagamento do IPTU mediante repasse do valor pago pelo locatário, provocou um abalo à imagem do reclamante e inscrição do seu nome na dívida ativa municipal. Assim, restou configurado o dano extrapatrimonial.",
+   "parafrase": "Também procede o pedido de danos morais. A inscrição do nome do demandante em dívida ativa trouxe angústia e desgaste e atingiu sua integridade emocional. Ao não pagar o IPTU com o valor repassado pelo locatário, a imobiliária agiu com desídia, abalou a imagem do reclamante e provocou a inscrição de seu nome na dívida ativa do município. O dano extrapatrimonial está, assim, configurado."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1162383-76.2024.8.26.9110",
+   "paragrafo": 25,
+   "original": "O dano moral, de fato, merece compensação, posto que traz à vítima desconforto e constrangimento, o que não pode ser considerado mero dissabor.Logo, arbitro o valor de R$ 3.000,00 a título de indenização por danos morais, por entender que referida quantia está em consonância com os danos suportados e não enseja o enriquecimento sem causa da parte autora.",
+   "parafrase": "O dano moral deve ser compensado, pois causa à vítima desconforto e constrangimento que vão além do mero dissabor. Fixo a indenização por danos morais em R$ 3.000,00, quantia que considero adequada aos danos sofridos e que não gera enriquecimento sem causa da parte autora."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1551434-05.2024.8.26.8247",
+   "paragrafo": 9,
+   "original": "O feito comporta julgamento no estado em que se encontra, tendo em vista o desinteresse das partes na produção de outras provas, nos termos do artigo 355, inciso II, do Código de Processo Civil.",
+   "parafrase": "Como as partes não manifestaram interesse em produzir outras provas, o processo pode ser julgado no estado em que está, conforme o artigo 355, inciso II, do Código de Processo Civil."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1551434-05.2024.8.26.8247",
+   "paragrafo": 10,
+   "original": "A autora relata, em síntese, que trafegava pela Gisele Henriques Tavares, sentido Horto Florestal, quando, na altura do número 115, o veículo VW Gol, de cor branca e placas RUK8A64, que estava estacionado, saiu repentinamente sem sinalizar e colidiu na lateral do veículo da requerente. Afirma que logo após o sinistro, o condutor se prontificou a pagar pelo conserto, mas, após a autora encaminhar o respectivo orçamento, deixou de responder.",
+   "parafrase": "Em resumo, a autora conta que seguia pela Gisele Henriques Tavares, no sentido do Horto Florestal, quando, perto do número 115, um VW Gol branco de placas RUK8A64, que estava parado, arrancou de repente sem dar seta e bateu na lateral do carro dela. Diz que o motorista se ofereceu na hora para pagar o conserto, mas parou de responder depois que ela lhe mandou o orçamento."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1551434-05.2024.8.26.8247",
+   "paragrafo": 11,
+   "original": "Em contestação a ré argui sua ilegitimidade passiva, porque apenas alugou o veículo envolvido na colisão para terceiro, não sendo responsável pelos danos causados por este. No mérito, pugna pela improcedência da ação.",
+   "parafrase": "Na contestação, a ré alega ilegitimidade passiva, pois só teria alugado o veículo envolvido na batida a um terceiro e não responderia pelos danos que ele causou. No mérito, pede que a ação seja julgada improcedente."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1551434-05.2024.8.26.8247",
+   "paragrafo": 12,
+   "original": "Afasto a preliminar de ilegitimidade passiva, pois a ré, enquanto proprietária do veículo que colidiu com o veículo da autora, tem legitimidade para figurar no polo passivo da presente ação, nos moldes da Súmula 492 do STF. A empresa locadora de veículos responde, civil e solidariamente com o locatário, pelos danos por este causados a terceiro, no uso do carro locado. Nesse sentido:",
+   "parafrase": "Rejeito a preliminar de ilegitimidade passiva: proprietária do veículo que bateu no carro da autora, a ré pode figurar no polo passivo, como estabelece a Súmula 492 do STF. A locadora responde civil e solidariamente com o locatário pelos danos que ele causar a terceiros usando o carro alugado. Nesse sentido:"
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1551434-05.2024.8.26.8247",
+   "paragrafo": 17,
+   "original": "A responsabilidade civil está alicerçada em três pilares: ato ilícito, nexo de causalidade e dano. No caso, o acidente de trânsito é incontroverso, bem como sua dinâmica, posto não ter havido impugnação específica por parte da requerida. Assim, ficou incontroverso que a autora transitava pela Gisele Henriques Tavares, sentido Horto Florestal, quando foi atingida pelo veículo de propriedade da requerida, que estava estacionado e saiu repentinamente em direção à via de rolamento, sem sinalizar com antecedência.",
+   "parafrase": "A responsabilidade civil se apoia em três elementos: ato ilícito, nexo causal e dano. Aqui, tanto o acidente quanto a forma como ocorreu são incontroversos, porque a requerida não os impugnou especificamente. Ficou assente, portanto, que a autora seguia pela Gisele Henriques Tavares, no sentido do Horto Florestal, quando o veículo da requerida, que estava estacionado, saiu de repente para a pista sem sinalizar antes e a atingiu."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1551434-05.2024.8.26.8247",
+   "paragrafo": 18,
+   "original": "A esse respeito, a preferência é daquele que já está em movimento no leito carroçável na respectiva faixa e que segue a sua trajetória, como é o caso da autora. Nesse sentido, confira-se a redação dos artigos 34 do CTB: \"Art. 34. O condutor que queira executar uma manobra deverá certificar-se de que pode executá-la sem perigo para os demais usuários da via que o seguem, precedem ou vão cruzar com ele, considerando sua posição, sua direção e sua velocidade\". Como já se decidiu:",
+   "parafrase": "Nesse ponto, tem preferência quem já está se movendo pela pista, na sua faixa, seguindo a própria trajetória, que é a situação da autora. É o que diz o artigo 34 do CTB: \"Art. 34. O condutor que queira executar uma manobra deverá certificar-se de que pode executá-la sem perigo para os demais usuários da via que o seguem, precedem ou vão cruzar com ele, considerando sua posição, sua direção e sua velocidade\". A jurisprudência já decidiu:"
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1551434-05.2024.8.26.8247",
+   "paragrafo": 21,
+   "original": "Conclui-se, portanto, que o condutor do veículo da ré cometeu ato ilícito que ocasionou danos ao patrimônio da parte autora e, por isso, a requerida tem o dever de indenizar os prejuízos. O dano é aquele comprovado pela autora através do orçamento de p. 10, com valor de R$5.460,00 (menor entre os 3 orçamentos).",
+   "parafrase": "Conclui-se, assim, que o motorista do veículo da ré praticou ato ilícito que causou dano ao patrimônio da autora, de modo que a requerida deve indenizá-la. O dano é o demonstrado pelo orçamento de p. 10, de R$5.460,00, o menor dos 3 orçamentos apresentados pela autora."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4182695-94.2024.8.26.6518",
+   "paragrafo": 11,
+   "original": "Trata-se de pedido condenatório de ressarcimento de prejuízo material sofrido em razão de acidente de trânsito, ao qual a parte ré teria dado causa.",
+   "parafrase": "O pedido é de condenação ao ressarcimento de dano material decorrente de acidente de trânsito que teria sido causado pela parte ré."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4182695-94.2024.8.26.6518",
+   "paragrafo": 12,
+   "original": "Pois bem. Com efeito, como é assente na jurisprudência, tendo o motorista colidido com a traseira do veículo que seguia à sua frente, milita em seu desfavor uma presunção de culpa pelo acidente, presunção \"juris tantum\" que, todavia, não foi elidida pela ré nos autos.",
+   "parafrase": "Pois bem. Segundo a jurisprudência pacífica, o motorista que bate na traseira do carro que vai à sua frente tem contra si a presunção de culpa pelo acidente; trata-se de presunção \"juris tantum\", mas a ré não conseguiu afastá-la nos autos."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4182695-94.2024.8.26.6518",
+   "paragrafo": 13,
+   "original": "O Código de Trânsito Brasileiro considera infração grave se o motorista deixar de guardar distância do carro à sua frente. Quem conduz atrás de outro, deve fazê-lo com prudência, observando distância e velocidade para que, em uma emergência, não colida em outro veículo. Existe a presunção de culpa, pois se entende previsível a diminuição da velocidade do veículo que vai à frente, bem como paradas bruscas, como no caso observado na presente ação.",
+   "parafrase": "Para o Código de Trânsito Brasileiro, deixar de manter distância do veículo da frente é infração grave. Quem dirige atrás de outro carro precisa ser prudente e controlar a distância e a velocidade para não bater nele numa emergência. Presume-se a culpa porque é previsível que o veículo da frente reduza a velocidade ou pare de repente, como aconteceu nesta ação."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4182695-94.2024.8.26.6518",
+   "paragrafo": 14,
+   "original": "No presente caso, a versão do requerido, que alega que o veículo do autor teria trocado de faixa sem qualquer alerta e, por isso, ocorreu a colisão, não encontra respaldo nos demais elementos dos autos.",
+   "parafrase": "Aqui, a versão do requerido, segundo a qual a batida aconteceu porque o carro do autor mudou de faixa sem avisar, não tem apoio nas demais provas dos autos."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4182695-94.2024.8.26.6518",
+   "paragrafo": 15,
+   "original": "Em contrapartida, a versão contida na petição inicial veio corroborada com as gravações das tratativas das partes, em que o requerido expressamente indicou oficina de funilaria para o requerente, conduta que não é característica de quem entende não ser responsável pelo sinistro.",
+   "parafrase": "Já a versão da petição inicial foi confirmada pelas gravações das conversas entre as partes, nas quais o requerido indicou ao requerente uma oficina de funilaria, comportamento incompatível com o de quem se considera sem culpa pelo acidente."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4182695-94.2024.8.26.6518",
+   "paragrafo": 16,
+   "original": "Registre-se que embora haja fundados indícios de que o autor conduzia veículo automotor com a CNH vencida, tal fato, por si só,  não afasta a responsabilidade do réu. Ademais, ao que parece, tal ocorrência já foi comunicada à autoridade policial, responsável pela apuração de eventual ilícito penal (fls 91/92).",
+   "parafrase": "Ainda que haja fortes indícios de que o autor dirigia com a CNH vencida, isso, sozinho, não exclui a responsabilidade do réu. Além disso, ao que tudo indica, o fato já foi levado à autoridade policial, a quem cabe apurar eventual crime (fls 91/92)."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4182695-94.2024.8.26.6518",
+   "paragrafo": 17,
+   "original": "Assim, não afastada a presunção da culpa, a responsabilidade pelo evento é da ré, que deverá arcar com o prejuízo causado, no valor do menor orçamento apresentado (p. 37). Consequentemente, o pedido contraposto é rejeitado.",
+   "parafrase": "Como a presunção de culpa não foi afastada, a ré responde pelo acidente e deve pagar o prejuízo pelo valor do menor orçamento juntado (p. 37). Por consequência, rejeito o pedido contraposto."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4182695-94.2024.8.26.6518",
+   "paragrafo": 20,
+   "original": "O prazo para interposição do recurso inominado é de dez dias e fluirá da intimação desta (art. 42, da Lei n. 9.099/95).",
+   "parafrase": "O recurso inominado deve ser interposto em dez dias, contados da intimação desta sentença (art. 42, da Lei n. 9.099/95)."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1653244-32.2024.8.26.7558",
+   "paragrafo": 9,
+   "original": "A parte autora objetiva a condenação da requerida ao ressarcimento da quantia de R$59,00, desembolsada para a realização de matrícula em curso de graduação, além de indenização por danos morais supostamente suportados, aos quais atribui o valor de R$9.941,00. Assevera que, em contato telefônico com a instituição, solicitou sua matrícula no curso de Geografia, na modalidade semipresencial. Argumenta que foi necessário o envio de documentos e que efetuou o pagamento da matrícula no valor de R$59,00. Aduz que as aulas deveriam iniciar no dia 4 de agosto e, ao ligar para a faculdade para confirmação, foi surpreendida ao ser informada de que o curso seria totalmente online. Pontua que optou por não mais cursar, sentindo-se enganada, pois só tinha interesse na modalidade semipresencial. Relata que ao comparecer à instituição, foi maltratada pelos funcionários. Requer o reembolso do valor da matrícula e uma indenização por danos morais.",
+   "parafrase": "A autora pede que a requerida seja condenada a lhe devolver R$59,00, pagos pela matrícula num curso de graduação, e a indenizar danos morais que estima em R$9.941,00. Conta que pediu por telefone matrícula no curso de Geografia semipresencial, enviou os documentos exigidos e pagou os R$59,00 da matrícula. As aulas começariam em 4 de agosto, mas, ao ligar para confirmar, soube que o curso seria todo online. Como só queria a modalidade semipresencial, sentiu-se enganada e desistiu. Diz ainda que foi maltratada pelos funcionários quando foi à instituição. Pede a devolução da matrícula e indenização por danos morais."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1653244-32.2024.8.26.7558",
+   "paragrafo": 12,
+   "original": "Inicialmente, afasto a preliminar de carência da ação por ausência de documentos comprobatórios. Tem-se que a inicial preenche os requisitos dos arts. 319 e 320 do CPC, porque certos os pedidos e causa de pedir e da narração dos fatos decorre logicamente a conclusão, sendo suficiente para garantir a ampla defesa da parte ré. Do mesmo modo, a autora tem interesse de agir: o provimento jurisdicional pleiteado é necessário e adequado para a reparação do dano.",
+   "parafrase": "De início, rejeito a preliminar de carência da ação por falta de documentos. A inicial atende aos arts. 319 e 320 do CPC: os pedidos e a causa de pedir são certos, a conclusão decorre logicamente da narração dos fatos, e isso basta para a ampla defesa da ré. A autora também tem interesse de agir, pois a tutela pedida é necessária e adequada para reparar o dano."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1653244-32.2024.8.26.7558",
+   "paragrafo": 16,
+   "original": "Isto posto, é essencial abordar a autonomia didático-científica das universidades, prevista no artigo 207 da Constituição Federal, que estabelece:",
+   "parafrase": "Dito isso, é preciso tratar da autonomia didático-científica das universidades, garantida pelo artigo 207 da Constituição Federal, nestes termos:"
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1653244-32.2024.8.26.7558",
+   "paragrafo": 18,
+   "original": "Tal disposição constitucional assegura às instituições de ensino superior o direito de gerir seus cursos de forma independente, sem interferência judicial, exceto quando há clara violação de direitos igualmente relevantes.",
+   "parafrase": "Essa norma constitucional garante às instituições de ensino superior o direito de administrar seus cursos com independência, sem interferência do Judiciário, salvo quando houver violação clara de direitos de igual relevância."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1653244-32.2024.8.26.7558",
+   "paragrafo": 19,
+   "original": "No caso em análise, a parte autora alega que se matriculou no curso de graduação em Geografia semipresencial ofertado pela ré e que posteriormente foi informada de que o curso seria oferecido exclusivamente online, o que resultou na perda de interesse pela sua realização. A requerida, por sua vez, esclarece que não foi possível ofertar o curso devido à ausência de quórum mínimo de alunos necessário para a formação da turma.",
+   "parafrase": "Neste caso, a autora afirma que se matriculou na graduação semipresencial em Geografia oferecida pela ré e depois foi avisada de que o curso seria só online, razão pela qual perdeu o interesse. A requerida explica que não conseguiu oferecer o curso porque não houve o número mínimo de alunos para formar a turma."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1653244-32.2024.8.26.7558",
+   "paragrafo": 20,
+   "original": "Pois bem. A reclamada não contesta a necessidade de devolução à autora do valor da matrícula, limitando-se a alegar que o reembolso não se concretizou por questões técnicas/administrativas relacionadas ao fornecimento de contas bancárias que não se adequavam às suas normas. Alega, ainda, a inexistência de danos morais, justificando que o contrato previa a possibilidade de cancelamento do curso por impossibilidade de formação de turma.",
+   "parafrase": "Pois bem. A reclamada não nega que deve devolver à autora o valor da matrícula; diz apenas que o reembolso não ocorreu por problemas técnicos e administrativos, porque as contas bancárias informadas não atendiam às suas normas. Sustenta também que não há dano moral, já que o contrato permitia cancelar o curso quando não fosse possível formar turma."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1653244-32.2024.8.26.7558",
+   "paragrafo": 21,
+   "original": "Verifica-se, a partir do conjunto probatório apresentado, que a requerida deixou de restituir à postulante o valor pago a título de matrícula. Aliado a isso, a análise dos documentos que integram a peça defensiva, especialmente os colacionados às fls. 130/135, comprova que a reclamada criou obstáculos à devolução do valor pago.",
+   "parafrase": "As provas mostram que a requerida não devolveu à postulante o que ela pagou de matrícula. Além disso, os documentos juntados com a defesa, sobretudo os de fls. 130/135, comprovam que a reclamada dificultou a devolução do valor pago."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1653244-32.2024.8.26.7558",
+   "paragrafo": 22,
+   "original": "Considerando que a matrícula não se efetivou de fato, uma vez que a própria instituição de ensino efetuou seu cancelamento, ao que tudo indica, devido à não formação da turma para a qual a autora se inscreveu, inexiste relação jurídica entre as partes. Assim, é medida de rigor a devolução da quantia de R$59,00 à suplicante.",
+   "parafrase": "Como a própria instituição cancelou a matrícula, ao que parece porque não formou a turma em que a autora se inscreveu, a matrícula não chegou a se efetivar e não há relação jurídica entre as partes. Impõe-se, portanto, devolver à suplicante a quantia de R$59,00."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 9,
+   "original": "O caso é de julgamento no estado em que se encontra, nos termos do art. 355, I, do CPC, porquanto desnecessária a produção de outras provas.",
+   "parafrase": "O processo pode ser julgado no estado em que está, conforme o art. 355, I, do CPC, pois não é necessário produzir outras provas."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 10,
+   "original": "O requerido é parte legítima para figurar no polo passivo, tendo em vista que está correlacionado ao cartão utilizado para a fraude debatida nos autos. As condições da ação devem ser analisadas à luz da teoria da asserção.",
+   "parafrase": "O requerido tem legitimidade passiva, pois está vinculado ao cartão usado na fraude discutida nos autos. As condições da ação são examinadas segundo a teoria da asserção."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 12,
+   "original": "Com efeito, o presente caso é regido pelo Código de Defesa do Consumidor, haja vista que a parte autora adquiriu e utilizou os serviços financeiros como destinatário final (CDC, arts. 2º e 3º).",
+   "parafrase": "De fato, aplica-se ao caso o Código de Defesa do Consumidor, já que a parte autora contratou e usou os serviços financeiros como destinatária final (CDC, arts. 2º e 3º)."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 13,
+   "original": "Restou incontroverso que o autor foi vítima de fraude, pela qual um terceiro utilizou seu cartão de débito transferindo o valor total de R$ 7.720,00, conforme também corroboram os documentos acostados pelas partes às fls. 17 e 73/74.",
+   "parafrase": "Não há controvérsia de que o autor sofreu uma fraude, na qual um terceiro usou seu cartão de débito e transferiu R$ 7.720,00 no total, como mostram também os documentos juntados pelas partes às fls. 17 e 73/74."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 14,
+   "original": "Além disso, de acordo com os documentos supramencionados, houve repetidas compras aprovadas (total de nove) para o mesmo estabelecimento e com valores altos, em um curto período. Ainda mais curioso, após uma primeira compra de R$ 100,00, os valores decrescem de R$ 990,00 a R$ 910,00 à razão de dez reais, tudo a evidenciar que consubstanciavam tentativas fraudulentas de transação.",
+   "parafrase": "Os mesmos documentos mostram, ainda, nove compras aprovadas em sequência, no mesmo estabelecimento, com valores altos e em pouco tempo. Mais curioso: depois de uma primeira compra de R$ 100,00, os valores caem de R$ 990,00 até R$ 910,00, de dez em dez reais, o que evidencia que eram tentativas de transação fraudulenta."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 15,
+   "original": "Incumbia à parte ré, na ocasião, adotar as providências que estavam ao seu alcance para impedir a concretização da fraude que, até aquele momento, era mera tentativa.",
+   "parafrase": "Cabia à ré, naquele momento, tomar as medidas ao seu alcance para impedir que a fraude, até então mera tentativa, se consumasse."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 16,
+   "original": "A conduta da instituição financeira, à luz do contido nos autos, é que propiciou que a fraude se concretizasse, pois aprovou a operação financeira mesmo diante de diversos indicativos de fraude: valores elevados das operações e, na sua quase totalidade, similares; mesmo estabelecimento; período reduzido.",
+   "parafrase": "Pelo que consta dos autos, foi a conduta do banco que permitiu a consumação da fraude, porque ele aprovou as operações apesar de vários sinais de fraude: valores altos e quase todos parecidos, o mesmo estabelecimento e um período curto."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 17,
+   "original": "Ressalte-se que consta dos autos boletim de ocorrência referente aos fatos (fls. 20/21), sendo que a parte autora também referiu ter comunicado os fatos à instituição financeira.",
+   "parafrase": "Note-se que há nos autos boletim de ocorrência sobre os fatos (fls. 20/21), e a parte autora disse também ter avisado o banco."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 21,
+   "original": "Verifica-se, portanto, que está caracterizado o defeito na prestação dos serviços, com a incidência do art. 14 do CDC e, seja qual for o método utilizado pelo(s) criminoso(s), incide a responsabilidade da instituição financeira, nos termos da Súmula 479 do C. STJ:",
+   "parafrase": "Está configurado, portanto, o defeito do serviço, aplicando-se o art. 14 do CDC; qualquer que tenha sido o método empregado pelo(s) criminoso(s), a instituição financeira responde, como estabelece a Súmula 479 do C. STJ:"
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 23,
+   "original": "Ademais, somente a culpa exclusiva de terceiro afasta a responsabilidade do fornecedor, situação inexistente no caso, por todo o quanto exposto.",
+   "parafrase": "Além disso, só a culpa exclusiva de terceiro exclui a responsabilidade do fornecedor, e ela não existe no caso, por tudo o que foi exposto."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 24,
+   "original": "Deste modo, de rigor que seja determinada a restituição dos valores despendidos pela parte autora em decorrência das transações questionadas.",
+   "parafrase": "Por isso, impõe-se determinar a devolução dos valores que a parte autora gastou por causa das transações contestadas."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 28,
+   "original": "1- condenar a parte ré a restituir à autora o valor das transações não reconhecidas em 14/09/2023, no importe total de R$ 7.720,00 (fl. 17 - \"PG*TON CP OBRAS\"), com correção monetária pela Tabela Prática do TJ/SP, desde o desembolso, e acrescido de juros de mora de 1% ao mês, desde a citação; e",
+   "parafrase": "1- condenar a ré a devolver à autora o valor das transações não reconhecidas de 14/09/2023, que somam R$ 7.720,00 (fl. 17 - \"PG*TON CP OBRAS\"), corrigido pela Tabela Prática do TJ/SP desde o desembolso e com juros de mora de 1% ao mês desde a citação; e"
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "9552057-66.2024.8.26.0468",
+   "paragrafo": 29,
+   "original": "2- condenar o banco réu ao pagamento da quantia de R$ 3.000,00 (três mil reais), a título de indenização por dano moral, corrigida monetariamente, pela Tabela Prática do E. TJ/SP e acrescida de juros de mora, ambos a partir do arbitramento, conforme Súmula 362 do STJ e RESP. 903.285, conforme entendimento atualmente adotado acerca do tema.",
+   "parafrase": "2- condenar o banco a pagar R$ 3.000,00 (três mil reais) de indenização por dano moral, com correção monetária pela Tabela Prática do E. TJ/SP e juros de mora, ambos desde o arbitramento, de acordo com a Súmula 362 do STJ e o RESP. 903.285, conforme o entendimento hoje adotado sobre o tema."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "6264484-60.2024.8.26.9746",
+   "paragrafo": 11,
+   "original": "Sustenta a parte autora, em suma, ter celebrado contrato com o requerido Jefferson para prestação de serviços de reforma, arcando com o valor de R$ 3.000,00 a título de sinal, transferido para a conta da requerida Bianca, esposa de Jefferson; contudo, o requerido não realizou os serviços contratados, e o requerente não recebeu o valor pago de volta, tendo de arcar com o pagamento dos serviços para outro prestador.",
+   "parafrase": "Em resumo, o autor diz que contratou o requerido Jefferson para fazer uma reforma e pagou R$ 3.000,00 de sinal, transferidos para a conta da requerida Bianca, mulher de Jefferson; o requerido, porém, não fez o serviço, não devolveu o dinheiro, e o requerente teve de pagar outro prestador para fazê-lo."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "6264484-60.2024.8.26.9746",
+   "paragrafo": 12,
+   "original": "Os efeitos da revelia incidem no presente caso, haja vista a espécie de questão controvertida e os elementos trazidos aos autos.",
+   "parafrase": "Aplicam-se aqui os efeitos da revelia, considerando o tipo de questão controvertida e as provas juntadas aos autos."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "6264484-60.2024.8.26.9746",
+   "paragrafo": 13,
+   "original": "Partindo-se dessa premissa, resta evidente, sob o aspecto jurídico, que deve haver a restituição dos valores pagos pela parte autora, como consequência da resolução contratual, com o retorno das partes ao \"status quo ante\".",
+   "parafrase": "A partir disso, fica claro, do ponto de vista jurídico, que os valores pagos pela parte autora devem ser devolvidos, em consequência da resolução do contrato, voltando as partes ao \"status quo ante\"."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "6264484-60.2024.8.26.9746",
+   "paragrafo": 14,
+   "original": "Por oportuno, registro que a documentação de fls. 74/76 não modifica a conclusão acima, na medida em que, mesmo que a requerida tenha repassado o valor ao requerido, tal não significa que esteve alheia à contratação; na realidade, o fato de ela autorizar que o valor fosse depositado em sua conta bancária, mesmo tendo o requerido uma conta bancária própria (conforme se extrai da fl. 75), indica o contrário.",
+   "parafrase": "Registro que os documentos de fls. 74/76 não alteram essa conclusão: ainda que a requerida tenha repassado o dinheiro ao requerido, isso não quer dizer que não participou da contratação. Ao contrário, o fato de ter permitido o depósito em sua própria conta, quando o requerido tinha conta bancária própria (como se vê à fl. 75), indica o oposto."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "6264484-60.2024.8.26.9746",
+   "paragrafo": 17,
+   "original": "Caberá à requerida, caso quite o débito do autor, ingressar com ação regressiva em face do requerido, caso assim entenda.",
+   "parafrase": "Se pagar a dívida com o autor, a requerida poderá, se quiser, propor ação regressiva contra o requerido."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "6264484-60.2024.8.26.9746",
+   "paragrafo": 18,
+   "original": "Por sua vez, não há plausibilidade, sob o aspecto jurídico, para indenização pelos valores que o autor pagou a outro prestador de serviços. Isso porque, caso assim fosse, o autor nada pagaria pela obra.",
+   "parafrase": "Por outro lado, não há fundamento jurídico para indenizar o que o autor pagou a outro prestador de serviços, porque, se assim fosse, a obra teria saído de graça para ele."
+  },
+  {
+   "papel": "teste",
+   "magistrada": "MAGISTRADA B",
+   "processo": "6264484-60.2024.8.26.9746",
+   "paragrafo": 19,
+   "original": "Não foi evidenciado nos autos que a conduta dos requeridos tenha ocasionado algum gravame nesse aspecto, pois o documento de fls. 12 nada indica acerca de a inércia dos requeridos ter impactado, de alguma forma, no orçamento do novo prestador. A mera divergência de valores cobrados não faz tal prova, pois é fato notório que os preços por serviços de construção ou empreitada variam substancialmente no mercado.",
+   "parafrase": "Não ficou demonstrado que a conduta dos requeridos tenha causado algum prejuízo nesse ponto: o documento de fls. 12 não mostra que a inércia deles tenha influído de algum modo no orçamento do novo prestador. A simples diferença entre os valores cobrados não prova isso, pois é notório que os preços de obras e empreitadas variam muito no mercado."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0999428-66.2024.8.26.5545",
+   "paragrafo": 10,
+   "original": "Os requerentes alegam, em breve síntese, que adquiriram 2 (duas) passagens aéreas da Operadora 123 Milhas, com destino à Barcelona - Espanha, com saída em 01/12/23 e retorno em 15/12/23, conforme se comprova pelo pedido de confirmação nº (11) 90000-0000 expedido pela Ré anexo (doc. 02). Por essas passagens, desembolsaram a quantia de R$ 4.792,00 (quatro mil, setecentos e noventa e dois reais), contudo, apesar dos autores terem pago os valores pelas passagens aéreas, afirmam que no dia 18/08/23, a empresa Ré encaminhou comunicado informando que não iria cumprir a obrigação pactuada em contrato, cancelando todas as emissões de passagens compradas via programa PROMO 123 do período de setembro a dezembro de 2023 e, que iria disponibilizar a devolução dos valores através de vouchers fracionados, sem qualquer tipo de consulta prévia aos Autores. Desse modo, diante da discordância, requerem o ressarcimento dos valores pagos, bem como indenização por danos morais.",
+   "parafrase": "Em resumo, os requerentes dizem que compraram da Operadora 123 Milhas 2 (duas) passagens aéreas para Barcelona - Espanha, com ida em 01/12/23 e volta em 15/12/23, como prova a confirmação do pedido nº (11) 90000-0000 emitida pela Ré (doc. 02). Pagaram R$ 4.792,00 (quatro mil, setecentos e noventa e dois reais) pelas passagens, mas em 18/08/23 a Ré avisou que não cumpriria o contrato, cancelou todas as emissões feitas pelo programa PROMO 123 entre setembro e dezembro de 2023 e ofereceu devolver os valores em vouchers fracionados, sem consultar antes os Autores. Por discordarem, pedem o reembolso do que pagaram e indenização por danos morais."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0999428-66.2024.8.26.5545",
+   "paragrafo": 11,
+   "original": "Citada, a requerida, preliminarmente, requereu a suspensão do processo. No mérito, argumentou inexistir ato ilícito. Sustenta a não configuração do dano moral e postula a total improcedência dos pedidos.",
+   "parafrase": "Citada, a requerida pediu, em preliminar, a suspensão do processo. No mérito, afirmou que não houve ato ilícito, negou o dano moral e pediu a improcedência total dos pedidos."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0999428-66.2024.8.26.5545",
+   "paragrafo": 12,
+   "original": "Preliminarmente, indefiro o pedido de suspensão do processo, na medida em que o art. 104 do CDC estabelece que \"As ações coletivas, previstas nos incisos I e II e do parágrafo único do art. 81, não induzem litispendência para as ações individuais, mas os efeitos da coisa julgada erga omnes ou ultra partes a que aludem os incisos II e III do artigo anterior não beneficiarão os autores das ações individuais, se não for requerida sua suspensão no prazo de trinta dias, a contar da ciência nos autos do ajuizamento da ação coletiva\". É importante ressaltar, ademais, que a propositura de ação coletiva não implica em suspensão automática das ações individuais propostas, como já decidiu o E. Tribunal de Justiça em caso similar:",
+   "parafrase": "Em preliminar, nego a suspensão do processo, porque o art. 104 do CDC dispõe que \"As ações coletivas, previstas nos incisos I e II e do parágrafo único do art. 81, não induzem litispendência para as ações individuais, mas os efeitos da coisa julgada erga omnes ou ultra partes a que aludem os incisos II e III do artigo anterior não beneficiarão os autores das ações individuais, se não for requerida sua suspensão no prazo de trinta dias, a contar da ciência nos autos do ajuizamento da ação coletiva\". Ressalto, ainda, que a ação coletiva não suspende automaticamente as ações individuais já propostas, como o E. Tribunal de Justiça decidiu em caso semelhante:"
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0999428-66.2024.8.26.5545",
+   "paragrafo": 14,
+   "original": "Consigne-se que o Tema 589 do STJ não se aplica do acaso porque a questão submetida ao julgado é a \"possibilidade de suspensão, nos termos da legislação vigente, do andamento de inúmeros processos até o julgamento em ação coletiva da tese jurídica de fundo neles indicada.\" E a controvérsia lá tratada discorre sobre \"piso salarial profissional nacional para os profissionais do magistério público da educação básica\". Não há similitude fática entre o presente caso (danos morais em razão de falha na prestação do serviço) e o caso paradigma, sendo evidente o \"distinguishing\" em relação ao Recurso Repetitivo do STJ, Tema 589, de modo que se mostra imperioso o prosseguimento do feito com a prolação de sentença.",
+   "parafrase": "Registre-se que o Tema 589 do STJ não se aplica aqui, pois trata da \"possibilidade de suspensão, nos termos da legislação vigente, do andamento de inúmeros processos até o julgamento em ação coletiva da tese jurídica de fundo neles indicada.\", e a controvérsia ali discutida é o \"piso salarial profissional nacional para os profissionais do magistério público da educação básica\". Os fatos deste caso (danos morais por falha na prestação do serviço) não se assemelham aos do paradigma, e o \"distinguishing\" em relação ao Recurso Repetitivo do STJ, Tema 589, é evidente; por isso, o processo deve prosseguir com a sentença."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0350091-03.2024.8.26.8102",
+   "paragrafo": 11,
+   "original": "O feito comporta julgamento no estado em que se encontra, tendo em vista que as alegações das partes e os documentos acostados aos autos permitem a prolação da sentença independentemente da produção de outras provas, nos termos do artigo 355, inciso I, do Código de Processo Civil.",
+   "parafrase": "O processo pode ser julgado no estado em que se encontra, já que as alegações das partes e os documentos juntados permitem sentenciar sem produzir outras provas, conforme o artigo 355, inciso I, do Código de Processo Civil."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0350091-03.2024.8.26.8102",
+   "paragrafo": 12,
+   "original": "A autora alega que foi vítima de fraude bancária e suspeita ter tido o seu cartão clonado, pois ao acessar o seu extrato, foi surpreendida com quatro compras desconhecidas efetuadas no dia 15/02/2024, efetuadas entre 11h58 até 12h09, com valores de R$2.500,00, R$500,00, R$20,00 e R$800,01, totalizando o montante de R$3.820,01, sempre em favor de PAG*Gildasiorodrigue. Alega que além de desconhecer as compras, estas destoam do padrão da requerente. Em razão de tais transações, a autora lavrou boletim de ocorrência. Ao protocolar reclamação junto ao banco, o requerido se eximiu das suas responsabilidades. Ante o exposto, requer: (i) inexigibilidade e nulidades das compras; (ii) restituição do valor pago, e (iii) indenização por dano moral.",
+   "parafrase": "A autora diz que sofreu fraude bancária e desconfia que seu cartão foi clonado, porque, ao consultar o extrato, encontrou quatro compras que não reconhece, feitas em 15/02/2024 entre 11h58 e 12h09, de R$2.500,00, R$500,00, R$20,00 e R$800,01, num total de R$3.820,01, todas para PAG*Gildasiorodrigue. Afirma que, além de não reconhecer as compras, elas fogem do seu padrão de gastos. Registrou boletim de ocorrência e reclamou no banco, que se negou a assumir qualquer responsabilidade. Pede: (i) a inexigibilidade e a nulidade das compras; (ii) a devolução do valor pago; e (iii) indenização por dano moral."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0350091-03.2024.8.26.8102",
+   "paragrafo": 13,
+   "original": "O Banco, preliminarmente, impugnou a gratuidade postulada pela autora e postulou a inépcia da inicial. No mérito, alega que, apesar de a parte autora dizer que desconhece as compras realizadas, por questão de segurança as transações ocorreram mediante a inserção de chip e senha (quanto as compras de R$2.500,00 - p. 42, e de R$20,00 - p. 43), e por aproximação do cartão à maquininha de pagamentos (quanto a compra de R$500,00 - p. 43). Aduz, ainda, que a senha é destinada ao único e exclusivo conhecimento do portador, para utilização nas transações que realizar, e que ela deverá ser memorizada e nunca anotada junto ao cartão, não sendo de responsabilidade do Banco qualquer fato resultante da utilização da senha do cartão por terceiros. Afirmou que a conta da autora é bastante movimentada, o que descaracteriza a alegação de que as transações destoavam do perfil da consumidora.",
+   "parafrase": "Em preliminar, o Banco impugnou a gratuidade pedida pela autora e alegou inépcia da inicial. No mérito, diz que, embora a autora afirme não conhecer as compras, por segurança elas foram feitas com chip e senha (as de R$2.500,00 - p. 42, e de R$20,00 - p. 43) e por aproximação do cartão à maquininha (a de R$500,00 - p. 43). Sustenta que a senha é de conhecimento exclusivo do titular, deve ser memorizada e nunca anotada com o cartão, e que o Banco não responde pelo uso da senha por terceiros. Disse também que a conta da autora tem muita movimentação, o que desmente a alegação de que as transações fugiam do perfil da consumidora."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0350091-03.2024.8.26.8102",
+   "paragrafo": 14,
+   "original": "Restou incontroverso que no dia 15 de fevereiro de 2024 foram efetuadas entre 11h58 até 12h09, compras com uso do cartão da requerente valores de R$2.500,00, R$500,00, R$20,00 e R$800,01, totalizando o montante de R$3.820,01, todas em favor de PAG*Gildasiorodrigue, que a autora alega desconhecer a origem. Resta como ponto controvertido o fato de essas compras terem ou não sido realizadas pela requerente.",
+   "parafrase": "Não se discute que em 15 de fevereiro de 2024, entre 11h58 e 12h09, o cartão da requerente foi usado em compras de R$2.500,00, R$500,00, R$20,00 e R$800,01, que somam R$3.820,01, todas para PAG*Gildasiorodrigue, e que a autora diz não reconhecer. O ponto controvertido é saber se foi ou não a requerente quem fez essas compras."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "0350091-03.2024.8.26.8102",
+   "paragrafo": 15,
+   "original": "Em contestação, o réu aduziu que não foram encontrados indícios de fraude nas compras impugnadas pela autora porque as compras com valores de R$2.500,00 e de R$20,00 foram realizadas com uso do chip e senha do cartão, enquanto que aquelas transações de R$500,00 e de R$800,00 ocorreram por meio da aproximação do cartão à maquininha de pagamentos (pp. 108-109). Afirmou que as transações impugnadas não destoam do perfil da requerente, o que afasta o reconhecimento do fortuito interno. Argumentou, ainda, que o fato ocorreu longe das agências do réu, não havendo que se falar em falha do sistema do Banco.",
+   "parafrase": "Na contestação, o réu afirmou não ter achado indícios de fraude nas compras impugnadas, porque as de R$2.500,00 e R$20,00 foram feitas com chip e senha, e as de R$500,00 e R$800,00, por aproximação do cartão à maquininha (pp. 108-109). Disse que as transações condizem com o perfil da requerente, o que exclui o fortuito interno, e acrescentou que tudo aconteceu longe das agências do réu, de modo que não há falha no sistema do Banco."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "8581218-36.2024.8.26.0936",
+   "paragrafo": 9,
+   "original": "Impõe-se, in casu, o julgamento antecipado, haja vista que os documentos acostados aos autos permitem a prolação da sentença, independentemente da produção de outras provas, nos termos do artigo 355, inciso I, do Código de Processo Civil.",
+   "parafrase": "O julgamento antecipado se impõe, pois os documentos dos autos permitem sentenciar sem a produção de outras provas, conforme o artigo 355, inciso I, do Código de Processo Civil."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "8581218-36.2024.8.26.0936",
+   "paragrafo": 10,
+   "original": "Regularmente citado, o requerido não apresentou contestação no prazo legalmente previsto, tornando-se revel. Logo, nos termos do artigo 20 da Lei 9.099/95, reputar-se-ão verdadeiros os fatos alegados na petição inicial.",
+   "parafrase": "Citado regularmente, o requerido não contestou no prazo legal e é revel. Por isso, conforme o artigo 20 da Lei 9.099/95, presumem-se verdadeiros os fatos alegados na inicial."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "8581218-36.2024.8.26.0936",
+   "paragrafo": 11,
+   "original": "Em síntese, a parte requerente alega que encontrava-se trafegando na Jonas Fontes Reis sentido São Paulo, quando freou e a moto do requerido bateu na traseira do seu carro. Aduz que o condutor assumiu a culpa e disse que iria arcar com os danos, entretanto, numa outra oportunidade se recusou a cumprir o combinado. Desse modo, pleiteia o ressarcimento do valor de R$ 2.885,00 (dois mil oitocentos e oitenta e cinco reais).",
+   "parafrase": "Em resumo, a parte requerente diz que seguia pela Jonas Fontes Reis, no sentido de São Paulo, quando freou e a moto do requerido bateu na traseira do carro. Conta que o motorista admitiu a culpa e prometeu pagar os danos, mas depois se recusou a cumprir o acordo. Pede, assim, o ressarcimento de R$ 2.885,00 (dois mil oitocentos e oitenta e cinco reais)."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "8581218-36.2024.8.26.0936",
+   "paragrafo": 12,
+   "original": "Havendo a revelia, para que a matéria de fato não seja reputada verdadeira, necessário que haja prova em sentido contrário às alegações formuladas na exordial ou circunstâncias que afastem a presunção de veracidade.",
+   "parafrase": "Na revelia, para que os fatos não sejam tidos como verdadeiros, é preciso haver prova contrária às alegações da inicial ou circunstâncias que afastem a presunção de veracidade."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "8581218-36.2024.8.26.0936",
+   "paragrafo": 13,
+   "original": "Na espécie dos autos, a colisão causada pelo réu é matéria de fato e, portanto, presume-se verdadeira, inexistindo qualquer indício ou circunstância que afaste tal presunção, não sendo permitida conclusão diversa daquela alegada.",
+   "parafrase": "Aqui, a colisão provocada pelo réu é questão de fato e, por isso, presume-se verdadeira; não há indício nem circunstância que afaste essa presunção, e não se pode concluir de modo diferente do alegado."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1781344-63.2024.8.26.9361",
+   "paragrafo": 14,
+   "original": "Inicialmente, indefiro o pedido de suspensão do processo. Nos termos do art. 104 do Código de Defesa do Consumidor, \"As ações coletivas, previstas nos incisos I e II e do parágrafo único do art. 81, não induzem litispendência para as ações individuais, mas os efeitos da coisa julgada erga omnes ou ultra partes a que aludem os incisos II e III do artigo anterior não beneficiarão os autores das ações individuais, se não for requerida sua suspensão no prazo de trinta dias, a contar da ciência nos autos do ajuizamento da ação coletiva\".",
+   "parafrase": "De início, nego o pedido de suspensão do processo. O art. 104 do Código de Defesa do Consumidor estabelece que \"As ações coletivas, previstas nos incisos I e II e do parágrafo único do art. 81, não induzem litispendência para as ações individuais, mas os efeitos da coisa julgada erga omnes ou ultra partes a que aludem os incisos II e III do artigo anterior não beneficiarão os autores das ações individuais, se não for requerida sua suspensão no prazo de trinta dias, a contar da ciência nos autos do ajuizamento da ação coletiva\"."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1781344-63.2024.8.26.9361",
+   "paragrafo": 15,
+   "original": "Além disso, inexiste obrigatoriedade de suspensão de ação individual em razão do ajuizamento de ação coletiva, segundo entendimento deste E. Tribunal de Justiça (Agravo de Instrumento 5898719-04.2024.8.26.7934; Relator (a):Maurício Fiorito; Órgão Julgador: 6ª Câmara de Direito Público; Foro de Paulínia- 1ª Vara; Data do Julgamento: 08/03/2023; Data de Registro: 08/03/2023).",
+   "parafrase": "Ademais, este E. Tribunal de Justiça entende que o ajuizamento de ação coletiva não obriga a suspender a ação individual (Agravo de Instrumento 5898719-04.2024.8.26.7934; Relator (a):Maurício Fiorito; Órgão Julgador: 6ª Câmara de Direito Público; Foro de Paulínia- 1ª Vara; Data do Julgamento: 08/03/2023; Data de Registro: 08/03/2023)."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1781344-63.2024.8.26.9361",
+   "paragrafo": 16,
+   "original": "Vale destacar que as ações civis públicas citadas pela ré sequer abordam o mesmo tema ora discutido. Tanto a ACP de nº 8888564-14.2024.8.26.7269, movida pelo Instituto Brasileiro de Cidadania IBRACI em face de Hurb Technologies S/A, quanto a ACP de nº 3355292-84.2024.8.26.4045, movida pelo Ministério Público do Rio de Janeiro em face de Hurb Technologies S/A, dizem respeito à publicidade veiculada pela ré e seus efeitos. No caso em tela, por sua vez, se discute especificamente a falha na prestação de serviços em virtude da não realização do reembolso requerido pelo consumidor.",
+   "parafrase": "Destaque-se que as ações civis públicas mencionadas pela ré nem tratam do mesmo assunto. A ACP nº 8888564-14.2024.8.26.7269, proposta pelo Instituto Brasileiro de Cidadania IBRACI contra Hurb Technologies S/A, e a ACP nº 3355292-84.2024.8.26.4045, proposta pelo Ministério Público do Rio de Janeiro contra Hurb Technologies S/A, versam sobre a publicidade da ré e suas consequências. Aqui, discute-se apenas a falha na prestação do serviço por não ter sido feito o reembolso pedido pelo consumidor."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1781344-63.2024.8.26.9361",
+   "paragrafo": 17,
+   "original": "Assim, embora pacificada a tese no Tema 60 do STJ de que \"Ajuizada ação coletiva atinente a macro-lide geradora de processos multitudinários, suspendem-se as ações individuais, no aguardo do julgamento da ação coletiva\", o caso concreto não está atrelado às mencionadas ações civis públicas, na medida em que versa sobre a falha na prestação de serviços decorrente de suposta cobrança abusiva de multa contratual e ausência de cumprimento de obrigação de restituir quantia certa.",
+   "parafrase": "Desse modo, ainda que o STJ tenha firmado no Tema 60 a tese de que \"Ajuizada ação coletiva atinente a macro-lide geradora de processos multitudinários, suspendem-se as ações individuais, no aguardo do julgamento da ação coletiva\", este caso não se vincula às ações civis públicas citadas, porque trata de falha na prestação do serviço por suposta cobrança abusiva de multa contratual e por não ter sido restituída quantia certa."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "1781344-63.2024.8.26.9361",
+   "paragrafo": 18,
+   "original": "Por fim, o Tema 589 do STJ não se aplica ao caso, porquanto a questão submetida ao julgado é a \"possibilidade de suspensão, nos termos da legislação vigente, do andamento de inúmeros processos até o julgamento em ação coletiva da tese jurídica de fundo neles indicada\"; sendo a controvérsia tratada atinente a \"piso salarial profissional nacional para os profissionais do magistério público da educação básica\". Dessarte, não há similitude fática entre o presente caso (danos materiais e morais em razão de falha na prestação do serviço) e o caso paradigma, sendo evidente a distinção da causa em relação ao Recurso Repetitivo do STJ (Tema 589).",
+   "parafrase": "Por último, o Tema 589 do STJ não se aplica, pois trata da \"possibilidade de suspensão, nos termos da legislação vigente, do andamento de inúmeros processos até o julgamento em ação coletiva da tese jurídica de fundo neles indicada\", e a controvérsia ali é o \"piso salarial profissional nacional para os profissionais do magistério público da educação básica\". Assim, os fatos deste caso (danos materiais e morais por falha na prestação do serviço) não se parecem com os do paradigma, e a distinção em relação ao Recurso Repetitivo do STJ (Tema 589) é evidente."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5159081-87.2024.8.26.9013",
+   "paragrafo": 12,
+   "original": "O requerente, taxista, ajuizou ação de indenização por danos materiais e lucros cessantes em face do requerido ao alegar ter seu veículo abalroado pelo réu no dia 01.06.2022, por volta das 08h40, quando se encontrava nas dependências do aeroporto internacional de Cumbica, em Guarulhos. Afirma que o acidente não deixou vítimas, mas dano material e lucros cessantes que pretende ser reparado.",
+   "parafrase": "Taxista, o requerente propôs ação de indenização por danos materiais e lucros cessantes contra o requerido, dizendo que o réu bateu em seu carro em 01.06.2022, por volta das 08h40, dentro do aeroporto internacional de Cumbica, em Guarulhos. Afirma que ninguém se feriu, mas que houve dano material e lucros cessantes, cuja reparação pede."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5159081-87.2024.8.26.9013",
+   "paragrafo": 13,
+   "original": "Em contestação juntada nas pp. 104-113, o requerido confirmou a dinâmica dos fatos e declarou ter procurado a parte autora para reparar administrativamente o dano, mas não os localizou. Impugnou a avaliação dos danos materiais porque desprovida de especificação dos reparos, assim como se insurgiu contra os lucros cessantes, pois os autores alegaram que o carro permaneceu parado por 37 dias na oficina, entretanto, deixaram de apresentar a declaração de imposto de renda para confirmar os lucros diários.",
+   "parafrase": "Na contestação (pp. 104-113), o requerido confirmou como os fatos aconteceram e disse que tentou encontrar a parte autora para reparar o dano administrativamente, sem sucesso. Contestou a avaliação dos danos materiais, por não especificar os reparos, e os lucros cessantes, porque os autores afirmaram que o carro ficou 37 dias parado na oficina, mas não juntaram a declaração de imposto de renda que confirmaria o ganho diário."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5159081-87.2024.8.26.9013",
+   "paragrafo": 15,
+   "original": "Incontroversa a ocorrência do sinistro materializada por meio da notícia dos fatos à autoridade policial (pp. 9-10). No âmbito policial, o declarante narrou que trafegava com seu veículo quando o trânsito parou, momento em que teve a traseira do seu veículo atingida pelo automóvel dirigido pelo réu.",
+   "parafrase": "O acidente é incontroverso, pois foi comunicado à autoridade policial (pp. 9-10). Na delegacia, o declarante contou que dirigia quando o trânsito parou e o carro conduzido pelo réu atingiu a traseira do seu."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5159081-87.2024.8.26.9013",
+   "paragrafo": 16,
+   "original": "Para se impor ao réu o dever de indenizar, necessário reste demonstrado o dano, a relação de causalidade e a culpa, segundo a hipótese de responsabilidade subjetiva positivada pelos arts. 186 e 927 do Código Civil.",
+   "parafrase": "Para que o réu tenha de indenizar, é preciso demonstrar o dano, o nexo causal e a culpa, conforme a responsabilidade subjetiva prevista nos arts. 186 e 927 do Código Civil."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5159081-87.2024.8.26.9013",
+   "paragrafo": 17,
+   "original": "Consoante os documentos amealhados aos autos, é possível reconhecer a ocorrência de acidente de trânsito envolvendo os veículos de propriedade de ambas as partes, corroborando a verossimilhança dos fatos narrados na inicial, especialmente a versão da dinâmica do acidente apresentada pelo autor, incontroversa.",
+   "parafrase": "Pelos documentos dos autos, é possível reconhecer que houve acidente de trânsito entre os veículos das duas partes, o que confirma a verossimilhança dos fatos da inicial, sobretudo a dinâmica do acidente narrada pelo autor, que não foi contestada."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4394275-34.2024.8.26.0693",
+   "paragrafo": 9,
+   "original": "O feito comporta julgamento no estado em que se encontra porque, muito embora verse sobre matéria de fato e de direito, as questões de fato já foram esclarecidas pelos documentos e argumentos lançados nos autos, restando pendente apenas o tratamento jurídico para solução do impasse.",
+   "parafrase": "O processo pode ser julgado no estado em que está, pois, embora envolva matéria de fato e de direito, os fatos já foram esclarecidos pelos documentos e pelos argumentos dos autos, faltando apenas o enquadramento jurídico para resolver a disputa."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4394275-34.2024.8.26.0693",
+   "paragrafo": 12,
+   "original": "Cuida-se de ação condenatória de indenização por danos morais, alegando a parte autora, em suma, que as requeridas lhe atacaram em sua dignidade e honra, sem contar os xingamentos e desqualificação pessoal por todos os meios de comunicação possíveis, inclusive na justiça.",
+   "parafrase": "Trata-se de ação de indenização por danos morais em que a parte autora diz, em resumo, que as requeridas atacaram sua dignidade e sua honra, além de xingá-la e desqualificá-la por todos os meios de comunicação possíveis, inclusive na justiça."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4394275-34.2024.8.26.0693",
+   "paragrafo": 14,
+   "original": "Importante esclarecer, entretanto, que os efeitos da revelia não são absolutos, de modo que o magistrado, com base em seu livre convencimento, pode ou não presumir verdadeiros os fatos narrados pelo parte requerente, a depender da prova produzida nos autos.",
+   "parafrase": "É preciso esclarecer, porém, que a revelia não tem efeitos absolutos: o juiz, pelo seu livre convencimento, pode ou não presumir verdadeiros os fatos narrados pela parte requerente, conforme a prova dos autos."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4394275-34.2024.8.26.0693",
+   "paragrafo": 16,
+   "original": "O deslinde da controvérsia, contudo, reclama a aplicação da regra ordinária do ônus da prova, disciplinada no artigo 373, inciso I, do Código de Processo Civil, segundo a qual incumbe à parte autora a demonstração dos fatos constitutivos de seu direito.",
+   "parafrase": "A solução da controvérsia, porém, depende da regra geral do ônus da prova, prevista no artigo 373, inciso I, do Código de Processo Civil, pela qual cabe à parte autora provar os fatos constitutivos do seu direito."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "4394275-34.2024.8.26.0693",
+   "paragrafo": 17,
+   "original": "Nesse sentido, a parte autora não coligiu provas bastantes aos autos, razão pela qual não se desvencilhou a contento de seu ônus probatório.",
+   "parafrase": "E a parte autora não trouxe aos autos provas suficientes, de modo que não se desincumbiu satisfatoriamente do seu ônus probatório."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "3963243-80.2024.8.26.5682",
+   "paragrafo": 10,
+   "original": "A parte autora requer a condenação do réu à restituição do valor de R$ 8.025,17 (oito mil e vinte e cinco reais e dezessete centavos), concernente ao pagamento de ITBI. Pleiteia, sucessivamente, que o réu seja compelido a tomar as providências junto à Prefeitura do Município de Osasco, para que o ressarcimento seja realizado, no prazo de 10 (dez) dias. Para tanto, alega ter adquirido imóvel por financiamento realizado com o banco réu. Posteriormente, ao enfrentar crise financeira, restou inadimplente em relação a algumas parcelas, tendo a instituição requerida iniciado o procedimento para retomada do bem. Antes da consolidação da propriedade do imóvel, a requerente conseguiu realizar o pagamento da dívida, incluindo o correspondente ao ITBI. O réu, contudo, instaurou procedimento administrativo junto à PMO requerendo a restituição do ITBI pago, o que foi deferido pela Prefeitura Municipal. Até a propositura da ação, contudo, o valor não havia sido devolvido à autora.",
+   "parafrase": "A autora pede que o réu seja condenado a lhe devolver R$ 8.025,17 (oito mil e vinte e cinco reais e dezessete centavos), pagos a título de ITBI, e, subsidiariamente, que seja obrigado a tomar providências junto à Prefeitura do Município de Osasco para que o ressarcimento ocorra em 10 (dez) dias. Diz que comprou um imóvel financiado pelo banco réu e que, depois, em crise financeira, deixou de pagar algumas parcelas, e o banco começou a retomar o bem. Antes da consolidação da propriedade, a requerente quitou a dívida, inclusive o valor do ITBI. O réu, porém, abriu processo administrativo na PMO pedindo a restituição do ITBI pago, e a Prefeitura deferiu o pedido. Até o ajuizamento da ação, o dinheiro não tinha sido devolvido à autora."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "3963243-80.2024.8.26.5682",
+   "paragrafo": 11,
+   "original": "Posteriormente, a demandante informou que a Prefeitura Municipal de Osasco procedeu ao estorno do tributo indevidamente recolhido, no montante de R$ 10.463,02 (dez mil, quatrocentos e sessenta e três reais e dois centavos). Entende, contudo, que, ante o prejuízo material suportado, o réu deve arcar com a diferença, tendo em vista que o valor há de ser composto pelo principal, acrescido de correção monetária desde o pagamento e juros de mora desde a citação (fls. 232/235).",
+   "parafrase": "Depois, a demandante informou que a Prefeitura Municipal de Osasco estornou o tributo recolhido indevidamente, no valor de R$ 10.463,02 (dez mil, quatrocentos e sessenta e três reais e dois centavos). Entende, porém, que o réu deve pagar a diferença, por causa do prejuízo material sofrido, já que o valor deveria incluir o principal com correção monetária desde o pagamento e juros de mora desde a citação (fls. 232/235)."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "3963243-80.2024.8.26.5682",
+   "paragrafo": 13,
+   "original": "Inicialmente, afasto a preliminar de ilegitimidade passiva suscitada pelo réu. A jurisprudência do Superior Tribunal de Justiça adota a teoria da asserção, segundo a qual a presença das condições da ação, a exemplo da legitimidade passiva, deve ser apreciada à luz da narrativa contida na inicial, não se confundindo com o exame de direito material objeto da ação (AgInt no AREsp 130429/RJ). No caso em tela, em que pese a devolução da quantia paga a título de ITBI seja, em tese, de responsabilidade da Prefeitura Municipal de Osasco, o que se discute precipuamente é a eventual inércia da instituição financeira em dar prosseguimento ao processo administrativo aberto no âmbito do Poder Público, no qual fora deferido o ressarcimento. Assim, o banco requerido é parte legítima a compor o polo passivo da demanda.",
+   "parafrase": "De início, rejeito a preliminar de ilegitimidade passiva do réu. O Superior Tribunal de Justiça adota a teoria da asserção, pela qual as condições da ação, como a legitimidade passiva, são examinadas a partir do que a inicial narra, sem se confundir com o mérito (AgInt no AREsp 130429/RJ). Aqui, embora a devolução do ITBI caiba, em tese, à Prefeitura Municipal de Osasco, o que se discute principalmente é se o banco deixou de dar andamento ao processo administrativo em que o ressarcimento foi deferido. O banco requerido é, portanto, parte legítima para o polo passivo."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "3963243-80.2024.8.26.5682",
+   "paragrafo": 14,
+   "original": "De igual modo, deixo de condenar a parte autora às penas de litigância de má-fé, visto que não se encontram preenchidos os requisitos do art. 80 do Código de Processo Civil. Na situação em comento, caso se reconhecesse ser a requerente litigante de má-fé, estar-se-ia incorrendo em violação ao seu direito de ação. Afinal, não se verifica tentativa de alteração da verdade dos fatos ou instrumentalização do processo para o alcance de objetivos ilegais ou ilegítimos.",
+   "parafrase": "Também não condeno a parte autora por litigância de má-fé, porque os requisitos do art. 80 do Código de Processo Civil não estão presentes. Reconhecer a requerente como litigante de má-fé, neste caso, violaria seu direito de ação, já que não houve tentativa de alterar a verdade dos fatos nem uso do processo para fins ilegais ou ilegítimos."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "3963243-80.2024.8.26.5682",
+   "paragrafo": 15,
+   "original": "Em relação à coisa julgada, é bem verdade que a controvérsia já fora submetida a análise judicial (processo nº 9507555-11.2024.8.26.3203). Na oportunidade, foi proferida sentença de improcedência em desfavor da parte autora, aos dias 22/02/2021. Ocorre que, ao que tudo indica, novos fatos sobrevieram, especialmente considerando o lapso de tempo decorrido desde a abertura do procedimento administrativo e o estorno realizado à demandante pela Prefeitura Municipal.",
+   "parafrase": "Quanto à coisa julgada, é certo que a questão já foi levada ao Judiciário (processo nº 9507555-11.2024.8.26.3203), onde se proferiu sentença de improcedência contra a autora em 22/02/2021. Ao que tudo indica, porém, surgiram fatos novos, sobretudo o tempo passado desde a abertura do processo administrativo e o estorno feito pela Prefeitura Municipal à demandante."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "7488298-23.2024.8.26.2403",
+   "paragrafo": 11,
+   "original": "O feito comporta o julgamento antecipado do mérito, conforme dispõe o artigo 355, inciso II, do Código de Processo Civil, sendo desnecessária a produção de outras provas em audiência.",
+   "parafrase": "O mérito pode ser julgado antecipadamente, nos termos do artigo 355, inciso II, do Código de Processo Civil, porque não é preciso produzir outras provas em audiência."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "7488298-23.2024.8.26.2403",
+   "paragrafo": 12,
+   "original": "Sustenta a parte autora que ser correntista do banco requerido e que no dia 04/12/2023, recebeu uma mensagem, via Whatsapp, de alguém se fazendo passar por seu filho, dizendo-lhe que o número de telefone tinha sido alterado e, na sequência, solicitou uma série de 10 transferências para o requerente entre os dias 4 a 6 de dezembro de 2023, que totalizaram R$50.820,00. Relata que no dia 7 conversou pessoalmente com o seu filho e descobriu ter sido vítima deum golpe. No dia 12 de dezembro, afirma ter sido contatado pelo mesmo número telefônico em que alguém se fez passar como funcionário da Central de atendimento do Banco requerido e deu novas instruções para o autor conseguir o estorno do valor transferido, mas, na verdade, era um novo golpe, em que o autor perdeu mais R$3.600,00. Pela desídia do Banco, pretende a condenação do réu no reembolso do valor, além de dano moral.",
+   "parafrase": "O autor diz que é correntista do banco requerido e que em 04/12/2023 recebeu pelo Whatsapp mensagem de alguém que fingia ser seu filho, avisando que tinha trocado de número; em seguida, essa pessoa pediu 10 transferências, feitas pelo requerente entre 4 e 6 de dezembro de 2023, que somaram R$50.820,00. No dia 7, ao conversar pessoalmente com o filho, percebeu que tinha caído num golpe. Em 12 de dezembro, o mesmo número o contatou, agora fingindo ser funcionário da Central de atendimento do Banco, e lhe passou novas instruções para conseguir o estorno; era, na verdade, outro golpe, e o autor perdeu mais R$3.600,00. Atribuindo o ocorrido à desídia do Banco, pede a condenação do réu a reembolsar o valor e a pagar dano moral."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "7488298-23.2024.8.26.2403",
+   "paragrafo": 13,
+   "original": "A relação entre as partes é de consumo, enquadrando-se perfeitamente nos conceitos de consumidor e fornecedor da Lei no 8.078/90 (Código de Defesa do Consumidor), pelo que são plenamente aplicáveis ao caso.",
+   "parafrase": "A relação entre as partes é de consumo e se encaixa nos conceitos de consumidor e fornecedor da Lei no 8.078/90 (Código de Defesa do Consumidor), que se aplica integralmente ao caso."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "7488298-23.2024.8.26.2403",
+   "paragrafo": 14,
+   "original": "Observo que, por se tratar de relação de consumo, desnecessária a comprovação da culpa da instituição financeira, uma vez que a responsabilidade civil do fornecedor é objetiva. Assim, ao consumidor basta comprovar os danos e o seu nexo causal com as falhas na prestação dos serviços.",
+   "parafrase": "Por se tratar de relação de consumo, não é preciso provar a culpa do banco, pois o fornecedor responde objetivamente. Basta ao consumidor demonstrar os danos e o nexo entre eles e a falha do serviço."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "7488298-23.2024.8.26.2403",
+   "paragrafo": 15,
+   "original": "No caso dos autos, todavia, não restou comprovada a falha na prestação dos serviços pelo banco réu. O autor reconhece, em sua petição inicial, que, após receber mensagem por Whatsapp, seguiu instruções passadas por golpistas e fez uma grande série de transferências de valores para terceiros, tudo isso sem qualquer cuidado.",
+   "parafrase": "Neste caso, porém, não ficou provada falha do serviço do banco réu. O próprio autor admite, na inicial, que depois de receber a mensagem pelo Whatsapp seguiu as instruções dos golpistas e fez várias transferências para terceiros sem nenhum cuidado."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "8035017-34.2024.8.26.6370",
+   "paragrafo": 13,
+   "original": "Alega o autor que contratou os serviços do requerido para desentupimento do encanamento de esgoto utilizando o maquinário K500, o qual foi cobrado o valor de R$ 2.000,00 (dois mil reais). Aduz que o valor correto seria o de R$ 656,00 (seiscentos e cinquenta e seis reais), requerendo o reembolso da quantia excedente paga.",
+   "parafrase": "O autor diz que contratou o requerido para desentupir o encanamento de esgoto com o maquinário K500 e que lhe cobraram R$ 2.000,00 (dois mil reais), quando o certo seria R$ 656,00 (seiscentos e cinquenta e seis reais). Pede a devolução do que pagou a mais."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "8035017-34.2024.8.26.6370",
+   "paragrafo": 16,
+   "original": "Verifica-se no presente caso, que ao autor foi repassado orçamento dos serviços que seriam prestados, tendo este concordado com o referido valor, tanto é que efetuou o pagamento conforme se verifica do recibo de fls. 03.",
+   "parafrase": "Aqui, o autor recebeu o orçamento dos serviços e concordou com o valor, tanto que pagou, como mostra o recibo de fls. 03."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "8035017-34.2024.8.26.6370",
+   "paragrafo": 18,
+   "original": "No que se refere ao valor dos serviços em questão, frise-se, que, não obstante o princípio pacta sunt servanda, a conferir a natureza ao contrato de \"lei entre as partes\", sofrer, no moderno direito obrigacional, relativização, notadamente por normas de ordem pública e, por consequência, de caráter cogente, como as aplicáveis às relações de consumo, a força vinculante do pacto prevalece. A propósito, julgado do Colendo Superior Tribunal de Justiça:",
+   "parafrase": "Quanto ao valor dos serviços, ressalte-se que, embora o princípio pacta sunt servanda, que faz do contrato \"lei entre as partes\", seja relativizado no direito obrigacional moderno, sobretudo por normas de ordem pública e, portanto, cogentes, como as das relações de consumo, a força obrigatória do contrato prevalece. Nesse sentido, decidiu o Colendo Superior Tribunal de Justiça:"
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "6934040-09.2024.8.26.8820",
+   "paragrafo": 18,
+   "original": "No caso em baila, a realização de negócio jurídico entre as partes tornou-se incontroversa diante das provas apresentadas, que demonstram que a suplicante assinou contrato junto à requerida, responsabilizando-se pelo adimplemento da avença. No entanto, de um lado, a autora alega que não contratou o kit fotográfico pelo valor informado e de outro, a empresa ré cobra pelos serviços prestados.",
+   "parafrase": "Aqui, as provas tornaram incontroverso o negócio entre as partes: a suplicante assinou contrato com a requerida e se obrigou a pagá-lo. A autora, porém, afirma que não contratou o kit fotográfico pelo valor informado, enquanto a ré cobra pelos serviços prestados."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "6934040-09.2024.8.26.8820",
+   "paragrafo": 19,
+   "original": "Em que pesem as alegações da autora de que o valor do book fotográfico teria sido negociado para R$ 300,00, em vez de R$ 2.500,00, não foram apresentados quaisquer indícios que sustentem essa afirmação.",
+   "parafrase": "Embora a autora diga que o book fotográfico teria sido negociado por R$ 300,00, e não por R$ 2.500,00, não há nenhum indício que apoie essa versão."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "6934040-09.2024.8.26.8820",
+   "paragrafo": 20,
+   "original": "A ré, por sua vez, desimcumbiu-se de seu ônus probatório ao juntar aos autos o Contrato de Compra e Venda de Kit Fotográfico, no qual expressamente consta que a forma de pagamento se daria através de boletos com 10 parcelas de R$ 250,00, contrato este assinado pela autora (fls. 55). Ademais, ainda que exista um boleto no valor de R$ 300,00, emitido constando o nome da autora como Cliente (fls. 11/12), não há comprovação de que essa quantia tenha sido efetivamente paga. A própria demandante afirma ter ignorado o boleto, inexistindo indícios de quitação da obrigação.",
+   "parafrase": "A ré, por outro lado, cumpriu seu ônus probatório ao juntar o Contrato de Compra e Venda de Kit Fotográfico, assinado pela autora (fls. 55), que prevê pagamento por boletos em 10 parcelas de R$ 250,00. E, embora haja um boleto de R$ 300,00 emitido em nome da autora como Cliente (fls. 11/12), não há prova de que tenha sido pago. A própria demandante diz que ignorou o boleto, e não há indício de quitação."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "6934040-09.2024.8.26.8820",
+   "paragrafo": 21,
+   "original": "A reclamante não questiona sua assinatura no instrumento contratual, tampouco alega que esta fora colhida de modo impróprio ou com má-fé, ou qualquer outra motivação que pudesse invalidar o instrumento. Inclusive, o mesmo contrato foi apresentado na petição inicial (fls. 8/9), limitando-se a postulante a afirmar que o valor acordado seria de R$ 300,00 e não R$ 2.500,00.",
+   "parafrase": "A reclamante não contesta sua assinatura no contrato, nem diz que ela foi obtida de forma indevida ou de má-fé, nem aponta qualquer outro motivo capaz de invalidar o documento. Aliás, ela mesma juntou o contrato com a inicial (fls. 8/9), apenas afirmando que o valor combinado era de R$ 300,00, e não R$ 2.500,00."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "6934040-09.2024.8.26.8820",
+   "paragrafo": 22,
+   "original": "Vislumbra-se que também foi juntada aos autos uma nota promissória (fls. 59) emitida em nome e com a assinatura da autora, documento igualmente não impugnado em sede de réplica, no qual se pactuou o pagamento de R$ 2.500,00 à Alf Work Cessão de Tit. E Cob. LTDA EPP, empresa à qual foi cedido o crédito pela Jonas Rocha Moura LTDA, conforme se verifica do Contrato de Cessão de Crédito anexado aos autos às fls. 56/58.",
+   "parafrase": "Foi juntada também uma nota promissória (fls. 59) emitida em nome da autora e assinada por ela, que também não foi impugnada na réplica, com a promessa de pagar R$ 2.500,00 à Alf Work Cessão de Tit. E Cob. LTDA EPP, a quem a Jonas Rocha Moura LTDA cedeu o crédito, como mostra o Contrato de Cessão de Crédito de fls. 56/58."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5447119-95.2024.8.26.9550",
+   "paragrafo": 12,
+   "original": "Inicialmente, observa-se que, tendo a demanda sido ajuizada em março de 2023, incide o disposto no art. 189 do Código Civil, para o qual \"violado o direito, nasce para o titular a pretensão, a qual se extingue, pela prescrição, nos prazos a que aludem os arts. 205 e 206\".",
+   "parafrase": "De início, como a ação foi proposta em março de 2023, aplica-se o art. 189 do Código Civil, segundo o qual \"violado o direito, nasce para o titular a pretensão, a qual se extingue, pela prescrição, nos prazos a que aludem os arts. 205 e 206\"."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5447119-95.2024.8.26.9550",
+   "paragrafo": 13,
+   "original": "No caso vertente, em se tratando de mensalidades escolares, a questão é enquadrada como de trato sucessivo. Isto significa que incide a prescrição individualmente sobre cada parcela paga pelo estudante/consumidor com o suposto reajuste ilegal levado a efeito pela ré.",
+   "parafrase": "Aqui, por se tratar de mensalidades escolares, a relação é de trato sucessivo. Assim, a prescrição corre separadamente para cada parcela paga pelo estudante/consumidor com o reajuste supostamente ilegal aplicado pela ré."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5447119-95.2024.8.26.9550",
+   "paragrafo": 14,
+   "original": "Por conseguinte, sendo o caso de prazo prescricional quinquenal, é o caso de se reconhecer a prescrição da pretensão ao ressarcimento relativo às semestralidades pagas anteriormente a 19 de março de 2018.",
+   "parafrase": "Sendo quinquenal o prazo de prescrição, deve-se reconhecer prescrita a pretensão de ressarcimento das semestralidades pagas antes de 19 de março de 2018."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5447119-95.2024.8.26.9550",
+   "paragrafo": 15,
+   "original": "É notório que, de acordo com o art. 487, parágrafo único, do Código de Processo Civil, a prescrição e a decadência, em regra, não podem ser reconhecidas sem que antes seja dada às partes oportunidade de manifestar-se. Na situação em comento, entretanto, não se observa prejuízo ao reconhecimento da prescrição. Isto porque, conforme fls. 18/19, as inconsistências nas cobranças das semestralidades se iniciaram, sobretudo, a partir de 2019. Nesse sentido, cabe transcrever entendimento doutrinário a respeito do tema, para o qual \"ao lado do princípio da cooperação e, consequentemente, do dever de consulta, há o interesse público na correta formação e desenvolvimento do processo\", razão pela qual se recomenda que \"tudo se resolva caso a caso, devendo-se fazer a ponderação na análise de cada hipótese trazida aos autos\" (Donizetti, Elpidio. Curso Didático de Direito Processual Civil. 19. ed. São Paulo: Atlas, 2016, p. 43/44).",
+   "parafrase": "Sabe-se que, pelo art. 487, parágrafo único, do Código de Processo Civil, a prescrição e a decadência, em regra, só podem ser reconhecidas depois de dada às partes a chance de se manifestar. Aqui, porém, reconhecer a prescrição não traz prejuízo, porque, segundo fls. 18/19, as cobranças inconsistentes das semestralidades começaram principalmente a partir de 2019. Vale transcrever a doutrina sobre o tema, segundo a qual \"ao lado do princípio da cooperação e, consequentemente, do dever de consulta, há o interesse público na correta formação e desenvolvimento do processo\", razão pela qual se recomenda que \"tudo se resolva caso a caso, devendo-se fazer a ponderação na análise de cada hipótese trazida aos autos\" (Donizetti, Elpidio. Curso Didático de Direito Processual Civil. 19. ed. São Paulo: Atlas, 2016, p. 43/44)."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA A",
+   "processo": "5447119-95.2024.8.26.9550",
+   "paragrafo": 20,
+   "original": "Com efeito, é incabível a interferência do Judiciário na autonomia didático-pedagógica da instituição de ensino superior, que inclusive detém liberdade de fixação dos valores das contraprestações devidas pelos serviços prestados (art. 207 da CF).",
+   "parafrase": "De fato, o Judiciário não pode interferir na autonomia didático-pedagógica da instituição de ensino superior, que é livre inclusive para fixar o valor da contraprestação pelos serviços que presta (art. 207 da CF)."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA B",
+   "processo": "8960473-08.2024.8.26.5752",
+   "paragrafo": 11,
+   "original": "Sustenta a parte autora, em suma, que anuncia seus produtos na plataforma do Mercado Livre, cujas transações são concretizadas via Mercado Pago, e que, em 10/06/2022, a representante da autora recebeu ligação telefônica comunicando que a coleta dos pedidos passaria a ser feita pelo Mercado Livre, e que enviaria um link para cadastro; relata que a representante clicou no link enviado, e não foi necessário inserir chave ou senha, mas na sequência notou que foi subtraído da conta o valor total de R$ 6.020,00.",
+   "parafrase": "Em resumo, a autora diz que vende seus produtos no Mercado Livre, com pagamentos pelo Mercado Pago, e que em 10/06/2022 sua representante recebeu um telefonema avisando que o Mercado Livre passaria a buscar os pedidos e que mandaria um link para cadastro; a representante clicou no link, sem precisar digitar chave nem senha, e logo depois percebeu que R$ 6.020,00 tinham sido retirados da conta."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA B",
+   "processo": "8960473-08.2024.8.26.5752",
+   "paragrafo": 12,
+   "original": "Os efeitos da revelia incidem no presente caso, haja vista a espécie de questão controvertida e os elementos trazidos aos autos.",
+   "parafrase": "Aplicam-se aqui os efeitos da revelia, dados o tipo de questão controvertida e as provas trazidas aos autos."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA B",
+   "processo": "8960473-08.2024.8.26.5752",
+   "paragrafo": 13,
+   "original": "Partindo-se dessa premissa, resta evidente, sob o aspecto jurídico, que a requerida Mercado Pago deverá restituir à parte autora o valor em questão, não restando clara, por sua vez, eventual falha da requerida Mercado Livre.",
+   "parafrase": "A partir disso, fica claro, juridicamente, que a requerida Mercado Pago deve devolver à parte autora o valor em discussão, ao passo que não ficou clara nenhuma falha da requerida Mercado Livre."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA B",
+   "processo": "8960473-08.2024.8.26.5752",
+   "paragrafo": 14,
+   "original": "Extrai-se dos autos que, na referida data, a parte autora recebeu ligação telefônica de uma pessoa que sabia que a autora vendia produtos por meio do Mercado Livre (informação, contudo, que pode ser acessada por qualquer pessoa, mediante pesquisa dos vendedores), e que, após clicar no link para cadastro no suposto benefício de coleta dos pedidos pelo Mercado Livre, isso já foi suficiente para que terceiros acessassem sua conta na plataforma Mercado Pago.",
+   "parafrase": "Os autos mostram que, naquela data, a autora recebeu um telefonema de alguém que sabia que ela vendia pelo Mercado Livre (dado que, porém, qualquer pessoa obtém pesquisando os vendedores) e que bastou ela clicar no link de cadastro no suposto serviço de coleta de pedidos do Mercado Livre para que terceiros entrassem na sua conta do Mercado Pago."
+  },
+  {
+   "papel": "calibracao",
+   "magistrada": "MAGISTRADA B",
+   "processo": "8960473-08.2024.8.26.5752",
+   "paragrafo": 15,
+   "original": "A documentação de fls. 30/33 corrobora que as quantias foram transferidas a partir da conta da autora no Mercado Pago.",
+   "parafrase": "Os documentos de fls. 30/33 confirmam que os valores saíram da conta da autora no Mercado Pago."
+  }
+ ]
+}

@@ -2,8 +2,8 @@
 
 Só o que falta fazer. O porquê de cada decisão fica em `DECISOES_Q1.md`.
 
-**Entrega:** `questao1.md`, `demonstracao_questao1.ipynb`, `q1.py`, `requirements.txt` e o PDF anexo.
-**Não enviar:** `.venv/`, `__pycache__/`, `_v1/`, `_v2/`, `Parte1–6.md`, `TRACKING_Q1.md`, `DECISOES_Q1.md`.
+**Entrega:** `questao1.md`, `demonstracao_questao1.ipynb`, `q1.py` (solução), `sinteticos.py` (dados sintéticos; lê `parafrases_q1.json`), `avaliacao.py`, `parafrases_q1.json`, `parafrases_reais_q1.json` (paráfrases de parágrafos reais), `sentencas_tjsp.json` (texto real pseudonimizado), `coletar_sentencas.py` (como o corpus foi gerado; não roda no caderno), `requirements.txt` e o PDF anexo.
+**Organização (2026-10-14):** a pasta `Q1/` tem só os entregáveis. Tudo o que não vai na entrega fica em `Q1/extras/` (`TRACKING_Q1.md`, `DECISOES_Q1.md`, `DIAGRAMA_Q1.md`, `Enunciado_q1.md`, `gerar_anexo.py`, `_v1/`, `_v2/`). O `gerar_anexo.py` roda da pasta `Q1` (`.venv/bin/python extras/gerar_anexo.py`) e grava o PDF em `Q1/`. Não enviar: `.venv/`, `__pycache__/` e `extras/`.
 
 ## Correções de funcionalidade
 
@@ -34,7 +34,7 @@ Só o que falta fazer. O porquê de cada decisão fica em `DECISOES_Q1.md`.
 
 - [x] **T20.** `requirements.txt`: tirar o comentário do `sentence-transformers`.
 - [x] **T21.** Restart & Run All limpo, 0 erros.
-- [ ] **T22.** (substituída pela T77) PDF anexo: refazer com os números novos e sem Jaccard (manual). Hoje ainda cita Jaccard, MinHash e embeddings no pipeline: não enviar enquanto não for refeito.
+- [x] **T22.** (substituída pela T77, feita) PDF anexo: refazer com os números novos e sem Jaccard (manual). Hoje ainda cita Jaccard, MinHash e embeddings no pipeline: não enviar enquanto não for refeito.
 
 ## Rodada 8 — revisão de ferramentas (2026-10-13)
 
@@ -614,13 +614,13 @@ A conclusão "a revisão humana domina" continua valendo (R$ 291/dia no melhor c
 - **T66:** medido, e o risco previsto não apareceu. Em 300 casos de massa (mesmo réu, 10 modelos, uma frase de fatos) o texto próprio fica em 11–24% das palavras, 44–84 sequências; os quatro tipos de par saem certos sem a regra nova, que não dispara. A regra entrou como decidido e é exercida num caso montado (§5.2). A §10 ganhou 60 pares de massa (860 no total), avaliados com o índice do cliente de massa: com o índice de outro cliente, 26 de 30 independentes iam para revisão.
 - **T70:** a razão real de custo 300 × 20 páginas é ~24× (o "50×" do plano vinha de números antigos); o texto usa os tempos medidos (22 s × 0,2 s).
 - **T76:** o texto ficou ~12% maior que antes (28,5 KB × 25,5 KB), depois de quatro passadas de corte; o que sobrou é o que as tarefas pedem.
-- **Pendente:** T22 (PDF anexo, manual).
+- **T22:** resolvida na rodada 12 pela T77 (PDF gerado por `gerar_anexo.py`).
 
 ## Rodada 12 — revisão adversarial (2026-10-14)
 
 Ordem de execução: T79 → T77 → T78; depois T80–T84.
 
-### [ ] T77. PDF anexo gerado por código, coerente com `questao1.md` (substitui a T22)
+### [x] T77. PDF anexo gerado por código, coerente com `questao1.md` (substitui a T22)
 
 **Problema.** `anexo_visual_questao1.pdf` ainda diz "Jaccard indica derivação", "shingles/IDF/MinHash", "Regras no MVP; modelo após rótulos", "Evolução: busca semântica" e "20–60% revisão". Contradiz o texto e mistura fases.
 
@@ -628,7 +628,7 @@ Ordem de execução: T79 → T77 → T78; depois T80–T84.
 
 **Pronto quando:** o PDF não citar Jaccard/MinHash/fases, os cortes baterem com `questao1.md` e o arquivo antigo tiver sido substituído.
 
-### [ ] T78. Embeddings executados de verdade na faixa de 20–60% (regras 10–12)
+### [x] T78. Embeddings executados de verdade na faixa de 20–60% (regras 10–12)
 
 **Problema.** As regras 10–12 dependem de pares semânticos por parágrafo (cosseno ≥ 0,85), mas o código não implementa a cobertura total e o caderno não roda embeddings: as reescritas extensas vão para revisão e o corte de 0,85 não tem medida.
 
@@ -636,7 +636,7 @@ Ordem de execução: T79 → T77 → T78; depois T80–T84.
 
 **Pronto quando:** as regras 10–12 rodarem no código, o corte vier da calibração e os números do texto forem os da nova execução.
 
-### [ ] T79. Corte de ocorrências das sementes sem degrau (`q1.py`, `trechos_iguais`)
+### [x] T79. Corte de ocorrências das sementes sem degrau (`q1.py`, `trechos_iguais`)
 
 **Problema.** Uma semente com mais de 20 ocorrências em B é descartada inteira. A contra "A repetido 20×" dá "cópia · trecho"; com 21×, "diferente" (erro silencioso).
 
@@ -644,16 +644,134 @@ Ordem de execução: T79 → T77 → T78; depois T80–T84.
 
 **Pronto quando:** o teste "A repetido 21×" estiver nos casos de borda e as saídas do caderno não mudarem nos demais casos.
 
-### [ ] T80. Avaliação com texto real: sentenças públicas de uma mesma vara
+### Notas de execução (rodada 12, 2026-10-14)
+
+- **T79:** saídas do caderno iguais, exceto o caso novo de borda (50/50 na época).
+- **T77:** `gerar_anexo.py` gera o PDF a partir de `LIMIARES`; mapa dos dois percentuais como figura central. O PDF antigo está só no histórico.
+- **T78:** o teste honesto com paráfrases achou três problemas, todos corrigidos e registrados em `DECISOES_Q1.md` (rodada 12): (1) a regra 8 chamava de "trecho" uma versão reescrita (agora exige tamanho 2×); (2) um corte único transformava paráfrase não reconhecida em "diferente" (agora dois cortes, calibrados em parágrafos); (3) qualificação e pedido de outro caso pareavam por estrutura (agora o par não contradiz os valores). Resultado no teste: 0 erros, revisão 10,9% → 7,9%; 13/19 reescritas → versão, 6 → revisão; 37/37 trechos reaproveitados → diferente. Modelo `paraphrase-multilingual-mpnet-base-v2` (20 ms/parágrafo em CPU). O conjunto de avaliação mudou de composição (o gerador consome o `rng` de outro jeito), então todos os números de `questao1.md` foram refeitos.
+- A pasta foi movida para `Claudio/Q1` durante a rodada; o caderno rodou limpo (34 células) antes da mudança e não depende do caminho.
+
+- **T81:** divisão pela árvore sintática (cada bloco de nível superior vai inteiro para um módulo). `q1.py` (solução, ~1.700 linhas) não tem nenhum nome indefinido sem os outros dois módulos (`pyflakes`): a solução não depende dos dados sintéticos. O índice padrão começa vazio, num registro por cliente (`INDICES_POR_CLIENTE`); `sinteticos.py` registra o cliente-1 ao ser importado. Saídas do caderno idênticas, exceto tempos.
+
+### [x] T80. Avaliação com texto real: sentenças públicas de uma mesma vara
 
 **Problema.** O filtro de modelo só foi testado com modelos sintéticos do mesmo autor das regras.
 
 **Decisão.** 50–100 sentenças públicas de uma mesma vara (o juiz reaproveita modelos, como um cliente): medir o texto de modelo reconhecido e a classe dos pares independentes.
 
-### [ ] T81. Separar `q1.py` em solução, geradores sintéticos e avaliação
+### [x] T81. Separar `q1.py` em solução, geradores sintéticos e avaliação
 
-### [ ] T82. Tabela de cortes: estruturais × calibráveis (no texto, curta)
+### [x] T82. Tabela de cortes: estruturais × calibráveis (no texto, curta)
 
-### [ ] T83. `DECISOES_Q1.md`: corrigir as linhas antigas (coleção de referência ≥ 5%, OCR com semelhança ≥ 0,6)
+### [x] T83. `DECISOES_Q1.md`: corrigir as linhas antigas (coleção de referência ≥ 5%, OCR com semelhança ≥ 0,6)
 
-### [ ] T84. Restart & Run All e conferência de todos os números de `questao1.md`
+### [x] T84. Restart & Run All e conferência de todos os números de `questao1.md`
+
+- **T80:** §10.6 com 226 sentenças reais (2 magistradas). Resultados: identidade 226/226; modelo reconhecido 39%/84% com o histórico próprio × 6%/25% com o da outra; 380 pares de processos diferentes sem nenhum "cópia"/"mesma peça" (359 diferente, 2 outra instância, 19 revisão de uma só homologação); cosseno calibrado chamaria 14 de "versão"; alterações controladas 193/195 certas, 2 revisão, 0 erros. O texto real revelou que a identidade não lia sentenças (corrigido em `q1.py`; saídas sintéticas iguais). Tempos no texto passaram a aproximados (±30% entre execuções); a asserção de tempo da §11 virou ordem de grandeza (≤ 10 s), para não quebrar em máquina carregada.
+
+## Rodada 13 — revisão de engenharia: ferramentas, hipóteses e implementação (2026-10-14)
+
+Tudo abaixo foi verificado com código antes de entrar aqui (comando e saída nas notas de cada tarefa). Ordem de execução: T85 → T86 → T87 → T88 → T89 → T90 → T91 → T92.
+
+### Implementação (erro real, confirmado)
+
+### [x] T85. O tipo de peça vira "inicial" em qualquer peça com abertura real ("nos autos da AÇÃO DE…")
+
+**Problema.** `extrair_tipo` (`q1.py:248`) fica com o padrão que aparece **primeiro** na abertura, e "AÇÃO DE" faz parte da fórmula de quase toda peça que não é a inicial ("nos autos da AÇÃO DE INDENIZAÇÃO que lhe move…, vem apresentar CONTESTAÇÃO"). Testado:
+
+| Abertura | Tipo lido |
+|---|---|
+| "…nos autos da AÇÃO DE INDENIZAÇÃO… vem apresentar CONTESTAÇÃO" | `inicial` |
+| "…nos autos da AÇÃO DE INDENIZAÇÃO… vem apresentar MEMORIAIS" | `inicial` |
+| "…nos autos da AÇÃO DE INDENIZAÇÃO… vem apresentar RÉPLICA" | `inicial` |
+| "…inconformado com a r. SENTENÇA, vem interpor RECURSO DE APELAÇÃO" | `inicial` |
+| "…vem propor a presente AÇÃO INDENIZATÓRIA em face de…" | `""` |
+| título "PETIÇÃO INICIAL" | `""` |
+
+De ponta a ponta: inicial × memoriais que repetem os fatos, com a abertura realista, sai **"versão · mesma peça"** (substitui a inicial). Com a abertura do gerador ("nos autos da ação", em minúsculas) sai "outra peça do caso". É o erro que a T26 dizia ter resolvido; só passou porque o gerador e a regra são do mesmo autor. E, com o tipo de um lado vazio, `_subtipo_versao` cai em "mesma peça" por omissão.
+
+**Decisão.**
+- O tipo é o **objeto do verbo da peça**: "apresentar/oferecer CONTESTAÇÃO|RÉPLICA|MEMORIAIS|CONTRARRAZÕES", "interpor|opor RECURSO|APELAÇÃO|AGRAVO|EMBARGOS", "propor|ajuizar (a presente) AÇÃO …". O título isolado ("CONTESTAÇÃO", "SENTENÇA") continua valendo. "AÇÃO DE" depois de "autos da/do" nunca define tipo.
+- Precedência: qualquer tipo específico vence "inicial".
+- "Mesma peça" (substitui) só com os **dois** tipos lidos e iguais. Com um tipo não lido, o resultado é "versão · peça não identificada": liga, mostra o diff e **não** substitui. Não é revisão: é uma versão decidida, só sem a afirmação de substituição.
+- Gerador: memoriais, contestação e recurso passam a usar a abertura realista ("nos autos da AÇÃO DE … que lhe move …").
+
+**Pronto quando:** as 6 aberturas acima estiverem nos casos de borda (§4.2) com o tipo certo; inicial × memoriais com abertura realista sair "outra peça do caso"; a §10 rodar com o gerador novo, com os números de `questao1.md` refeitos.
+
+### [x] T86. Número de lei vira "valor em comum" e abre a trava do par semântico
+
+**Problema.** `valores_do_paragrafo` (`q1.py:530`) conta como valor qualquer número com 3+ dígitos. Testado: "Lei nº 8.078/90", "art. 186" e "Súmula 479" saem como valores. Dois parágrafos de fatos **diferentes** que citam o CDC têm "valor em comum" e a trava ("um par não contradiz os valores do caso") deixa de valer justamente no caso mais comum do contencioso de consumo. Nos sintéticos isso não aparece porque os fatos do gerador não citam lei.
+
+**Decisão.** Tirar de `valores_do_paragrafo` os números precedidos de "art.", "artigo", "lei", "nº" de lei, "súmula", "decreto", "inciso", "§" e os números no formato de lei (`\d{1,2}\.\d{3}/\d{2,4}`). Valor continua sendo data, R$, CPF/CNPJ, processo e número solto do caso (protocolo, contrato, quantidade).
+
+**Pronto quando:** os dois parágrafos do teste acima não tiverem valor em comum; um caso de borda com dois fatos diferentes que citam a mesma lei, na faixa de 20–60%, não sair "versão".
+
+### [x] T87. Embedding trunca parágrafos longos em 128 tokens
+
+**Problema.** `paraphrase-multilingual-mpnet-base-v2` vem com `max_seq_length = 128`. Medido: **13%** dos parágrafos das sentenças reais (≥ 8 palavras) passam de 128 tokens (p90 = 156), e 11% dos parágrafos de fatos sintéticos (p90 = 129). O que passa do limite é cortado em silêncio; numa reescrita que muda a ordem das frases, o par é julgado pela metade. Petições têm parágrafos de fatos mais longos que sentenças.
+
+**Decisão.** `max_seq_length = 512` (o modelo aceita; medido nos sintéticos: mesmos cortes, recall no corte alto 71,3% → 72,0%). Parágrafo acima de 512 tokens é dividido em janelas de frases, e o cosseno do par é o da melhor janela.
+
+**Pronto quando:** a configuração estiver em `Embeddings` e a §10.1 refeita.
+
+### Ferramentas e hipóteses
+
+### [x] T88. Os cortes de cosseno foram "medidos" em paráfrases sintéticas, e o modelo separa mal
+
+**Problema.**
+1. A tabela de cortes chama 0,875/0,725 de "medidos", mas foram medidos em paráfrases de um gabarito fixo (`parafrases_q1.json`) sobre fatos de vocabulário fechado. O teste (§10.2) usa **o mesmo gabarito**: as 13/19 reescritas que saem "versão" estão na mesma distribuição da calibração.
+2. Medido na amostra de calibração: no corte alto, o modelo acha só **71%** das paráfrases; no corte mínimo, **41%** dos pares de outro fato também passam. A separação vem quase toda da trava do valor (que a T86 mostra ser frágil), não do embedding. As 6 reescritas em revisão são consequência disso.
+3. O modelo é de 2019 e treinado em paráfrase genérica. Há modelos multilíngues melhores para português na mesma faixa de custo.
+
+**Decisão.**
+- **Calibrar em texto real.** Paráfrases de parágrafos **das sentenças TJSP** (os mesmos fatos com outras palavras), escritas uma vez por LLM e versionadas em JSON, como já é feito com `parafrases_q1.json`. Negativos difíceis reais: parágrafos de outras sentenças **da mesma magistrada** (mesmo vocabulário, outros fatos). Calibração e teste separados por sentença.
+- **Escolher o modelo pela medida**, não por default: comparar o mpnet atual com `intfloat/multilingual-e5-base` e `BAAI/bge-m3` nessa amostra real (AUC, recall no corte de falso par ≤ 1%, falso par no corte de recall ≥ 99%, ms por parágrafo em CPU) e ficar com o melhor. (Resultado nas notas de execução.)
+- Na tabela de cortes, "medidos" passa a dizer onde: "em paráfrases reais de sentenças".
+
+**Pronto quando:** o JSON de paráfrases reais existir; os dois cortes e o modelo saírem da amostra real; a §10.2 mostrar as reescritas sintéticas **e** as reais com os cortes novos.
+
+### [x] T89. Os cortes de 20% e 60% têm evidência real e o texto diz que não têm
+
+**Problema.** A tabela de cortes põe 20/50/60% em "a calibrar… só pares reais rotulados os calibram". Mas os 380 pares reais de processos diferentes já medem o lado do corte de 20%. Medido (`pct_alto`): Magistrada A, p99 = 7%, máximo 12%; Magistrada B, p99 = 28%, com 1 par em 23% (sai "diferente" pela cobertura total) e 2 acima de 60% (as duas sentenças-modelo de desistência/ausência, que saem "versão · outra instância", a resposta certa). As alterações reais ficam todas acima de 90%.
+
+**Decisão.** A linha "A calibrar" vira "Verificados em texto real": 20% (99% dos pares de processos diferentes ficam abaixo; os que passam, a cobertura total decide) e 60% (nenhuma alteração real abaixo de 90%). 50%, 55%/65% e os cortes de cliente sem histórico continuam declarados como escolhidos, com o motivo de cada um em uma linha. Uma figura na §10.6: histograma de `pct_alto` dos pares reais com os cortes marcados.
+
+**Pronto quando:** a §10.6 imprimir esses percentis e `questao1.md` usar esses números.
+
+### Texto (`questao1.md`)
+
+### [x] T90. "±5 pontos em volta de 60%" não é o que o código faz
+
+**Problema.** O texto diz que, na faixa, só a margem de ±5 pontos em volta de 60% de cobertura total vai para revisão. No código (`q1.py:1109–1122`), a revisão é decidida por **dois cortes de cosseno diferentes**: um par com 40% de cobertura no corte alto e 70% no corte mínimo vai para revisão, e isso não é "±5 pontos". A regra 12 da tabela tem o mesmo problema.
+
+**Decisão.** Reescrever a frase e a regra 12 como o código decide: "versão" se a cobertura com o corte alto passa de 65%/50%; "diferente" se nem com o corte mínimo passa de 55%; revisão no resto.
+
+### [x] T91. Respostas curtas às seis perguntas do enunciado, no topo
+
+**Problema.** O resumo explica a ideia e as decisões, mas quem corrige procura as seis perguntas do enunciado e tem de achá-las em 220 linhas densas (12 regras com 2a e 4a, exceções, tabelas).
+
+**Decisão.** Logo depois da ideia central, uma tabela de seis linhas: pergunta do enunciado → resposta em uma frase → seção. As regras da seção 2 são renumeradas de 1 a N, sem "2a"/"4a" (mesma numeração nos comentários de `q1.py`).
+
+### Fecho da rodada
+
+### [x] T92. Restart & Run All, conferência de todos os números e `DECISOES_Q1.md`
+
+`DECISOES_Q1.md`: seção "Rodada 13" (tipo pelo objeto do verbo e "peça não identificada"; números de lei fora dos valores; 512 tokens; cortes e modelo calibrados em paráfrases reais; cortes de 20%/60% verificados em texto real). Guia de defesa: "Como o sistema sabe que é memoriais e não a inicial?" e "Por que esse modelo de embedding?".
+
+### Notas de verificação (rodada 13)
+
+- **T85:** `extrair_tipo` nas 6 aberturas da tabela; `classificar(inicial, memoriais)` com a abertura do gerador → "versão · outra peça do caso" (`tipos = ('inicial', 'memoriais')`); com a abertura realista → "versão · mesma peça" (`('inicial', 'inicial')`).
+- **T86:** `valores_do_paragrafo("…Lei nº 8.078/90 e do art. 186 do Código Civil…")` → `{('número', '186'), ('número', '8.078/90')}`.
+- **T87:** `SentenceTransformer(...).max_seq_length == 128`; tokens por parágrafo: sentenças reais mediana 54, p90 156, 13,2% > 128; fatos sintéticos mediana 91, p90 129, 10,7% > 128. Com 512: recall no corte alto 0,713 → 0,720; falso par no corte alto 0,007 nos dois casos.
+- **T88:** na amostra de calibração (seed 1), mpnet: recall no corte alto 0,71, falso par no corte mínimo 0,41; medianas do cosseno 0,90 (paráfrase) × 0,70 (outro fato).
+- **T89:** `pct_alto` nos 190 pares de cada magistrada: A p50 0 / p99 0,071 / máx. 0,116; B p50 0 / p99 0,281 / máx. 0,864 (2 pares ≥ 0,60, ambos "outra instância"; 1 par em 0,231, "diferente"). Os 19 em revisão da B têm `pct_alto` = 0 (texto próprio insuficiente).
+
+### Notas de execução (rodada 13, 2026-10-14)
+
+- **T85:** `extrair_tipo` lê o objeto do verbo da peça (verbo depois de "vem/vêm", ou nome da peça em maiúsculas: "Requer a citação para apresentar contestação" continua sem tipo); depois o título isolado; depois maiúsculas; "inicial" por último. A abertura passou a ir até ~60 palavras, porque um extrator que quebra "EXMO. / SR. / DR." em linhas empurrava a qualificação para fora (achado pela §10: 14 "frases em linhas + valor" saíam "peça não identificada"; o código antigo também não lia o tipo ali, só o escondia com o padrão "mesma peça"). Gerador: contestação e memoriais com a abertura real. Novo subtipo "peça não identificada" (não substitui, fora dos grupos). §4.2: 7 aberturas com `assert` e o caso novo "tipo não lido num dos lados" → "versão · peça não identificada". 226/226 sentenças continuam com tipo.
+- **T86:** `RE_NORMA` tira art./lei/súmula/decreto/inciso/§/"8.078/90" antes de procurar valores. §4.2: "outra petição copia 2 fatos; todos os fatos citam o CDC" → "diferente".
+- **T87:** `max_seq_length = 512`; acima disso, média das janelas de frases. Efeito no teste: reescritas extensas 13 → 14 de 19 "versão" (5 em revisão).
+- **T88:** comparação de modelos em 57 paráfrases reais × 24.386 pares de outros processos da mesma magistrada: mpnet AUC 0,9992, 18 ms/parágrafo; e5-base AUC 0,9990, cossenos comprimidos (corte de 1% de falso par em 0,965); bge-m3 AUC 0,9994, 60 ms/parágrafo. Fica o mpnet. Nos sintéticos, o mpnet tem AUC 0,977 (os negativos sintéticos são mais difíceis). Cortes mantidos: no real, alto 94,7%/96,2% de recall (calibração/teste) com 0,12%/0,06% de falso par; mínimo 100% de recall com 1,1%/0,8% de falso par. §10.1 imprime e verifica. `parafrases_reais_q1.json`: 109 paráfrases de 18 sentenças (57 calibração, 52 teste, separadas por sentença; ementas e transcrições não parafraseadas). §10.6: reescritas reais 6/6 "versão · mesma peça"; trechos reaproveitados reais 5 "diferente" + 1 revisão, 0 erros. A revisão vem de parágrafos genéricos que passam o corte mínimo (limitação no texto); o melhor par recíproco foi testado e não ajuda.
+- **T89:** a afirmação do plano "nenhuma alteração real abaixo de 90%" estava errada: medido, edições pontuais ≥95% e parágrafo removido ≥72% (menor dos dois percentuais); o texto usa esses números. §10.6 imprime p99/máximo do maior percentual por magistrada (A: 7%/12%; B: 28%/86%) e o histograma com os cortes. Tabela de cortes: "Verificados em texto real" (20%, 60%) e "Escolhidos" (50%, 55/65%, 60% abaixo de 20%, cliente sem histórico).
+- **T90/T91:** regra 14 e a frase da faixa descrevem os dois cortes; regras 1–14 sem "2a"/"4a" (texto e comentários de `q1.py`); tabela de respostas curtas no topo de `questao1.md`.
+- **T92:** Restart & Run All limpo (68 células, 0 erros). Números que mudaram e foram atualizados em `questao1.md`: casos de borda 53 → 55; revisão 7,9% → 7,8%; histórico sem fatos 8,0% → 7,9%; cosseno do documento inteiro dif.→versão 52 → 53 e versão→dif. 27 → 26; contenção de conjuntos 12,7% → 12,6%; reescritas 13/6 → 14/5. PDF anexo regenerado. `DECISOES_Q1.md`: seção "Rodada 13" e 2 perguntas no guia de defesa. `questao1.md` cresceu ~4 KB (tabela de respostas curtas e evidência real).

@@ -1,6 +1,6 @@
 # Instrução — diagrama de design da Questão 1
 
-Roteiro para montar o diagrama quando a Questão 1 estiver fechada. A fonte é `questao1.md`: se algo mudar lá (cortes, regras, nomes de classes), atualize este roteiro antes de desenhar.
+Roteiro do diagrama. O PDF é gerado por `gerar_anexo.py` (cortes lidos de `LIMIARES`). A fonte é `questao1.md`: se algo mudar lá (cortes, regras, nomes de classes), atualize este roteiro antes de desenhar.
 
 ## Objetivo
 
@@ -18,7 +18,7 @@ Caixas em sequência, com setas:
 
 1. **Extrair e normalizar** — texto por página; cabeçalho, imagens e assinatura à parte. Saída lateral: *página sem texto → pendência de OCR*.
 2. **Indexar** — hashes (bytes, texto, texto normalizado), fluxo de palavras com página, shingles de 5 palavras, citações, partes/processo/tipo de peça.
-3. **Buscar candidatos no caso** — hashes para cópia; todos os docs do caso (até ~200) ou índice de âncoras (casos maiores).
+3. **Buscar candidatos no caso** — hashes para cópia; todos os docs do caso (até ~2 milhões de palavras) ou índice de âncoras (casos maiores).
 4. **Comparar** — alinhamento (sementes + Greedy String Tiling) → **dois percentuais** + diff + identidade.
 5. **Decidir** → seta para o Painel B.
 
@@ -76,7 +76,7 @@ Seta de retorno de "Em revisão" até os cortes do Painel B: *rótulos calibram 
 
 ## O que não entra
 
-- Jaccard, MinHash, cosseno ou embeddings como medida (nem como contraste).
+- Jaccard, MinHash ou cosseno do documento inteiro como medida (nem como contraste). Embedding só como o sinal da faixa de 20–60% (pares de parágrafos).
 - Números da avaliação sintética, histórico de rodadas, versões antigas (`_v1`, `_v2`).
 - Detalhes de implementação (PyMuPDF, nomes de funções) e a lista de limitações.
 

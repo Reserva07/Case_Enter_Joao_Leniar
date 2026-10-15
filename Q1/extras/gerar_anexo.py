@@ -1,14 +1,20 @@
 """Gera anexo_visual_questao1.pdf (e .png): fluxo, decisão e ação numa página A4 paisagem.
 
-Os cortes vêm de LIMIARES (q1.py), para o anexo nunca divergir do código. Uso: .venv/bin/python gerar_anexo.py
+Os cortes vêm de LIMIARES (q1.py), para o anexo nunca divergir do código. Fica em extras/ e grava o PDF na pasta da entrega.
+Uso, na pasta Q1: .venv/bin/python extras/gerar_anexo.py
 """
+import sys
+from pathlib import Path
+
 import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Ellipse, FancyBboxPatch, Polygon, Rectangle
 
-from q1 import LIMIARES as L
+ENTREGA = Path(__file__).resolve().parent.parent   # pasta Q1: q1.py e o PDF anexo
+sys.path.insert(0, str(ENTREGA))
+from q1 import LIMIARES as L  # noqa: E402
 
 COR = {"cópia": "#0072B2", "versão": "#009E73", "trecho": "#CC79A7", "diferente": "#7F7F7F",
        "revisão": "#D55E00", "faixa": "#56B4E9", "fluxo": "#4D4D4D"}
@@ -19,6 +25,10 @@ LINHA = 0.0215                                  # altura de uma linha de corpo (
 
 def pct(x):
     return f"{x * 100:.0f}%"
+
+
+def num(x):
+    return f"{x:g}".replace(".", ",")
 
 
 def caixa(ax, x, topo, w, titulo, corpo="", cor=COR["fluxo"], tracejada=False, fundo=None, tam=8.4):
@@ -137,24 +147,24 @@ def painel_decisao(ax, fig, x0=0.258, x1=0.722):
     xr = 0.562
     legenda = [
         ("versão", f"maior ≥ {pct(d)} e menor ≥ {pct(inteiro)}:\num documento saiu do outro"),
-        ("trecho", f"maior ≥ {pct(d)} e menor < {pct(inteiro)}:\num está dentro do outro, se\ncontíguo (espalhado → revisão)"),
-        ("faixa", f"maior entre {pct(dif)} e {pct(d)}: decide a\ncobertura total = literal +\nparágrafos parafraseados\n"
-                  f"(embedding, cosseno ≥ {L.cosseno_par:.2f})\n"
+        ("trecho", f"maior ≥ {pct(d)}, menor < {pct(inteiro)},\num documento ≥ 2× o outro:\ntrecho, se contíguo (senão,\nrevisão)"),
+        ("faixa", f"maior entre {pct(dif)} e {pct(d)}: decide a\ncobertura total = literal + pará-\ngrafos reescritos (embedding,\n"
+                  f"cosseno ≥ {num(L.cosseno_par)}, valor comum)\n"
                   f"≥ {pct(L.cobertura_versao)} e ≥ {pct(inteiro)} → versão\n"
-                  f"< {pct(L.cobertura_diferente)} nos dois → diferente\n"
+                  f"< {pct(L.cobertura_diferente)} mesmo com {num(L.cosseno_par_minimo)}\n  → diferente\n"
                   f"{pct(L.cobertura_diferente)}–{pct(L.cobertura_versao)} → em revisão"),
         ("diferente", f"os dois < {pct(dif)}: só vocabulário\nou modelo em comum (citação\nexplícita vira o vínculo \"cita\")"),
     ]
-    yy = 0.565
+    yy = 0.585
     for cls, texto in legenda:
         ax.add_patch(Rectangle((xr, yy - 0.015), 0.009, 0.015, transform=ax.transAxes, facecolor=COR[cls], edgecolor="none"))
         ax.text(xr + 0.014, yy, texto, transform=ax.transAxes, fontsize=7.6, va="top", color=TINTA, linespacing=1.3)
-        yy -= 0.018 + 0.0205 * (texto.count("\n") + 1)
+        yy -= 0.012 + 0.0205 * (texto.count("\n") + 1)
     ax.text(xr, yy - 0.004, "B3. Versão de quê?", transform=ax.transAxes, fontsize=9, fontweight="bold")
     for k, (cond, res) in enumerate([("tipo de peça diferente", "outra peça do caso"),
                                      ("outras partes (CPF) ou processo", "outra instância do modelo"),
                                      ("mesmo tipo, partes e processo", "mesma peça (substitui)")]):
-        base = yy - 0.032 - k * 0.040
+        base = yy - 0.030 - k * 0.037
         ax.text(xr, base, cond, transform=ax.transAxes, fontsize=7.6, va="center", color=TINTA)
         ax.text(xr + 0.008, base - 0.018, "→ " + res, transform=ax.transAxes, fontsize=7.6, va="center", fontweight="bold", color=COR["versão"])
 
@@ -181,7 +191,7 @@ def painel_acao(ax, x0=0.744, w=0.246):
     caixa(ax, x0 + 0.127, 0.205, 0.119, "Cache", "por parágrafo: uma\nnova versão paga\nsó o que mudou", tam=8.0)
 
 
-def main(caminho="anexo_visual_questao1.pdf", png=None):
+def main(caminho=ENTREGA / "anexo_visual_questao1.pdf", png=None):
     fig = plt.figure(figsize=(11.69, 8.27))
     ax = fig.add_axes([0, 0, 1, 1])
     ax.axis("off")
