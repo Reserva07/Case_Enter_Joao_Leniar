@@ -1,7 +1,6 @@
-"""Gera anexo_visual_questao1.pdf (e .png): fluxo, decisão e ação numa página A4 paisagem.
+"""Gera anexo_visual_questao1.pdf: o fluxo de um documento novo, exatamente como descrito em questao1.md.
 
-Os cortes vêm de LIMIARES (q1.py), para o anexo nunca divergir do código. Fica em extras/ e grava o PDF na pasta da entrega.
-Uso, na pasta Q1: .venv/bin/python extras/gerar_anexo.py
+Uso, na pasta Q1: .venv/bin/python extras/gerar_anexo.py [png_de_conferencia]
 """
 import sys
 from pathlib import Path
@@ -10,204 +9,282 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.patches import Ellipse, FancyBboxPatch, Polygon, Rectangle
+from matplotlib.patches import FancyArrowPatch, Polygon, Rectangle
+from matplotlib.path import Path as Path_
 
-ENTREGA = Path(__file__).resolve().parent.parent   # pasta Q1: q1.py e o PDF anexo
-sys.path.insert(0, str(ENTREGA))
-from q1 import LIMIARES as L  # noqa: E402
+ENTREGA = Path(__file__).resolve().parent.parent
 
-COR = {"cópia": "#0072B2", "versão": "#009E73", "trecho": "#CC79A7", "diferente": "#7F7F7F",
-       "revisão": "#D55E00", "faixa": "#56B4E9", "fluxo": "#4D4D4D"}
-FUNDO = {k: v + "2E" for k, v in COR.items()}   # mesma cor, translúcida
-TINTA = "#1A1A1A"
-LINHA = 0.0215                                  # altura de uma linha de corpo (fração da página)
-
-
-def pct(x):
-    return f"{x * 100:.0f}%"
+FUNDO, GRADE, TINTA, SETA, NOTA = "#F2F2F2", "#E3E3E3", "#1A1A1A", "#333333", "#555555"
+LILAS, ROSA, VERDE, AZUL = "#DCD9FA", "#F6C9C9", "#BDEBCB", "#C9DAF8"
+BRANCO, CINZA, LARANJA, AMARELO = "#FFFFFF", "#E0E0E0", "#F9D7B8", "#FBEFC4"
+LINHA = 3.0   # altura de uma linha de texto, em unidades do desenho
+plt.rcParams["font.family"] = ["Helvetica Neue", "Arial", "DejaVu Sans"]
 
 
-def num(x):
-    return f"{x:g}".replace(".", ",")
+def caixa(ax, cx, cy, w, h, cor, texto="", tam=11, peso="normal"):
+    ax.add_patch(Rectangle((cx - w / 2, cy - h / 2), w, h, facecolor=cor, edgecolor=TINTA, lw=1.6, zorder=2))
+    if texto:
+        ax.text(cx, cy, texto, ha="center", va="center", fontsize=tam, color=TINTA, weight=peso, zorder=3,
+                linespacing=1.2)
 
 
-def caixa(ax, x, topo, w, titulo, corpo="", cor=COR["fluxo"], tracejada=False, fundo=None, tam=8.4):
-    """Caixa com título e corpo; a altura sai do número de linhas. Devolve a base."""
-    h = 0.040 + LINHA * (corpo.count("\n") + 1 if corpo else 0)
-    ax.add_patch(FancyBboxPatch((x, topo - h), w, h, boxstyle="round,pad=0.003,rounding_size=0.006", transform=ax.transAxes,
-                                facecolor=fundo or "white", edgecolor=cor, lw=1.3, ls="--" if tracejada else "-"))
-    ax.text(x + 0.007, topo - 0.010, titulo, transform=ax.transAxes, fontsize=tam + 0.6, fontweight="bold", color=TINTA, va="top")
-    if corpo:
-        ax.text(x + 0.007, topo - 0.035, corpo, transform=ax.transAxes, fontsize=tam - 0.4, color=TINTA, va="top", linespacing=1.32)
+def passo(ax, x0, topo, w, titulo, linhas, cor=BRANCO):
+    """Caixa com título em negrito e uma linha por item; devolve o y de baixo."""
+    h = 5.2 + LINHA * len(linhas)
+    ax.add_patch(Rectangle((x0, topo - h), w, h, facecolor=cor, edgecolor=TINTA, lw=1.6, zorder=2))
+    ax.text(x0 + 2, topo - 2.8, titulo, ha="left", va="center", fontsize=11.5, weight="bold", color=TINTA, zorder=3)
+    for k, linha in enumerate(linhas):
+        ax.text(x0 + 2, topo - 6.0 - LINHA * k, linha, ha="left", va="center", fontsize=10, color=TINTA, zorder=3)
     return topo - h
 
 
-def seta(ax, x0, y0, x1, y1, cor=COR["fluxo"]):
-    ax.annotate("", xy=(x1, y1), xytext=(x0, y0), xycoords="axes fraction",
-                arrowprops=dict(arrowstyle="-|>", color=cor, lw=1.2, shrinkA=0, shrinkB=0))
+def losango(ax, cx, cy, w, h, texto):
+    ax.add_patch(Polygon([(cx, cy + h / 2), (cx + w / 2, cy), (cx, cy - h / 2), (cx - w / 2, cy)],
+                         facecolor=AMARELO, edgecolor=TINTA, lw=1.6, zorder=2))
+    ax.text(cx, cy, texto, ha="center", va="center", fontsize=10, color=TINTA, zorder=3, linespacing=1.15)
 
 
-def cilindro(ax, x, y, w, h, titulo, corpo):
-    ax.add_patch(Rectangle((x, y), w, h, transform=ax.transAxes, facecolor="#F2F2F2", edgecolor=COR["fluxo"], lw=1.1))
-    for yy in (y, y + h):
-        ax.add_patch(Ellipse((x + w / 2, yy), w, 0.018, transform=ax.transAxes, facecolor="#F2F2F2", edgecolor=COR["fluxo"], lw=1.1))
-    ax.text(x + 0.006, y + h - 0.018, titulo, transform=ax.transAxes, fontsize=8.6, fontweight="bold", va="top", color=TINTA)
-    ax.text(x + 0.006, y + h - 0.060, corpo, transform=ax.transAxes, fontsize=7.8, va="top", color=TINTA, linespacing=1.3)
+def seta(ax, pontos, tracejada=False):
+    """Seta por uma polilinha (cotovelos retos)."""
+    caminho = Path_(pontos, [Path_.MOVETO] + [Path_.LINETO] * (len(pontos) - 1))
+    ax.add_patch(FancyArrowPatch(path=caminho, arrowstyle="-|>,head_length=7,head_width=4.5", color=SETA, lw=1.6,
+                                 linestyle=(0, (4, 3)) if tracejada else "-", zorder=1, shrinkA=0, shrinkB=0))
 
 
-def titulo_painel(ax, x, texto):
-    ax.text(x, 0.885, texto, transform=ax.transAxes, fontsize=11.5, fontweight="bold", color=TINTA)
+def ramo(ax, a, b):
+    """Seta curva que sai para baixo e chega para baixo (como as do esboço)."""
+    d = (a[1] - b[1]) * 0.75
+    caminho = Path_([a, (a[0], a[1] - d), (b[0], b[1] + d), b], [Path_.MOVETO, Path_.CURVE4, Path_.CURVE4, Path_.CURVE4])
+    ax.add_patch(FancyArrowPatch(path=caminho, arrowstyle="-|>,head_length=7,head_width=4.5", color=SETA, lw=1.6,
+                                 zorder=1, shrinkA=0, shrinkB=0))
 
 
-# ── A. Fluxo ─────────────────────────────────────────────────────────────────
-def painel_fluxo(ax, x=0.012, w=0.218):
-    titulo_painel(ax, x, "A. Fluxo por documento")
-    etapas = [
-        ("1. Extrair e normalizar", "texto por página; cabeçalho, imagens\ne assinatura à parte; worker isolado"),
-        ("2. Indexar", "hashes (bytes, texto, normalizado);\npalavras com página; sequências de\n5 palavras; citações; partes e tipo"),
-        ("3. Candidatos no caso", f"hashes para cópia; todos os docs\naté ~2 mi de palavras no caso;\nacima, índice de âncoras"),
-        ("4. Comparar", "alinhamento por sementes →\ndois percentuais + diff + identidade"),
-        ("5. Decidir", "portão de igualdade e mapa (B)"),
-    ]
-    topo = 0.860
-    for k, (titulo, corpo) in enumerate(etapas):
-        base = caixa(ax, x, topo, w, titulo, corpo)
-        if k == 0:
-            ax.text(x + w / 2 + 0.008, base - 0.014, "página sem texto → OCR", transform=ax.transAxes,
-                    fontsize=7.4, color=COR["revisão"], style="italic", va="center")
-        if k < len(etapas) - 1:
-            seta(ax, x + w / 2, base, x + w / 2, base - 0.028)
-        topo = base - 0.028
-    cilindro(ax, x, 0.105, 0.105, 0.135, "Histórico do\ncliente", f"≥{L.padrao_min_casos} outros casos\n= texto de modelo\n(não conta)")
-    cilindro(ax, x + 0.113, 0.105, 0.105, 0.135, "Documentos\ndo caso", "a comparação\nnunca sai\ndo caso")
-    ax.text(x, 0.072, "usados nas etapas 2–4", transform=ax.transAxes, fontsize=7.4, color=COR["fluxo"], style="italic")
-    ax.text(x, 0.040, "assíncrono · idempotente (upload_id) ·\nem série por caso · decisão grava as versões",
-            transform=ax.transAxes, fontsize=7.4, color=COR["fluxo"], va="center")
+def rotulo(ax, x, y, texto, ha="left", rot=0):
+    ax.text(x, y, texto, ha=ha, va="center", fontsize=10, style="italic", color=NOTA, rotation=rot, zorder=3)
 
 
-# ── B. Decisão ───────────────────────────────────────────────────────────────
-def painel_decisao(ax, fig, x0=0.258, x1=0.722):
-    titulo_painel(ax, x0, "B. Decisão")
-    ax.text(x0, 0.852, "B1. Portão de igualdade (antes dos percentuais; vale a primeira)",
-            transform=ax.transAxes, fontsize=9, fontweight="bold")
-    portao = [
-        ("bytes iguais", "cópia · exata", "cópia"),
-        ("extração incompleta ou não confiável; página renderizada diferente", "em revisão", "revisão"),
-        ("texto, cabeçalho, imagens e assinatura iguais", "cópia · exata", "cópia"),
-        ("igual após normalização, ou imagem/assinatura diferente", "cópia · com ressalva", "cópia"),
-        ("texto de OCR e só confusões de letras (número divergente: item a item)", "em revisão", "revisão"),
-        (f"texto próprio < {L.min_shingles} sequências (mesma peça e partes: decide pelo texto inteiro)", "em revisão", "revisão"),
-    ]
-    for k, (cond, res, cls) in enumerate(portao):
-        yy = 0.822 - k * 0.027
-        ax.text(x0 + 0.004, yy, f"{k + 1}. {cond}", transform=ax.transAxes, fontsize=7.9, va="center", color=TINTA)
-        ax.text(x1, yy, res, transform=ax.transAxes, fontsize=7.9, va="center", ha="right", fontweight="bold", color=COR[cls])
-    ax.add_patch(FancyBboxPatch((x0 + 0.002, 0.633), x1 - x0 - 0.004, 0.030, boxstyle="round,pad=0.003", transform=ax.transAxes,
-                                facecolor=FUNDO["cópia"], edgecolor=COR["cópia"], lw=1.2))
-    ax.text((x0 + x1) / 2, 0.648, "Cópia só sai por igualdade. Nenhum limiar produz cópia.", transform=ax.transAxes,
-            fontsize=9, fontweight="bold", ha="center", va="center", color=COR["cópia"])
-
-    ax.text(x0, 0.600, "B2. Os dois percentuais (texto próprio = sem modelo e sem citações)",
-            transform=ax.transAxes, fontsize=9, fontweight="bold")
-    m = fig.add_axes([0.292, 0.135, 0.255, 0.42])
-    d, inteiro, dif = L.derivacao, L.documento_inteiro, L.diferente
+def mapa(ax, fig, topo, limites):
+    """Onde cada par cai: % do novo no outro × % do outro no novo, com as regiões da etapa 3."""
+    X0, X1, Y0, Y1 = limites
+    ax.text(10, topo - 2, "Onde cada par cai pelos dois percentuais (a cópia sai antes, pelo hash)", ha="left", va="center",
+            fontsize=11.5, weight="bold", color=TINTA)
+    lado, x_m, y_m = 58, 22, topo - 8 - 58          # quadrado do gráfico, em unidades do desenho
+    m = fig.add_axes([(x_m - X0) / (X1 - X0), (y_m - Y0) / (Y1 - Y0), lado / (X1 - X0), lado / (Y1 - Y0)])
+    m.set_facecolor(BRANCO)
+    dif, inteiro, d = 20, 50, 60
     regioes = [
-        ("diferente", [(0, 0), (dif, 0), (dif, dif), (0, dif)]),
-        ("faixa", [(dif, 0), (d, 0), (d, d), (0, d), (0, dif), (dif, dif)]),
-        ("versão", [(inteiro, d), (inteiro, 1), (1, 1), (1, inteiro), (d, inteiro), (d, d)]),
-        ("trecho", [(d, 0), (1, 0), (1, inteiro), (d, inteiro)]),
-        ("trecho", [(0, d), (inteiro, d), (inteiro, 1), (0, 1)]),
+        (CINZA, None, [(0, 0), (dif, 0), (dif, dif), (0, dif)]),
+        ("#DCE8FA", "//", [(dif, 0), (d, 0), (d, d), (0, d), (0, dif), (dif, dif)]),
+        (VERDE, None, [(inteiro, d), (inteiro, 100), (100, 100), (100, inteiro), (d, inteiro), (d, d)]),
+        (ROSA, None, [(d, 0), (100, 0), (100, inteiro), (d, inteiro)]),
+        (ROSA, None, [(0, d), (inteiro, d), (inteiro, 100), (0, 100)]),
     ]
-    for cls, pts in regioes:
-        m.add_patch(Polygon(pts, closed=True, facecolor=FUNDO[cls], edgecolor=COR[cls], lw=1.0, hatch="//" if cls == "faixa" else None))
-    for xx, yy, t, cls in [(dif / 2, dif / 2 + 0.03, "dife-\nrente", "diferente"), ((d + dif) / 2, (d + dif) / 2 + 0.02, "faixa\nsemântica", "faixa"),
-                           ((1 + d) / 2, 0.93, "versão", "versão"), ((1 + d) / 2, inteiro / 2 + 0.10, "trecho", "trecho"),
-                           (inteiro / 2, (1 + d) / 2, "trecho", "trecho")]:
-        m.text(xx, yy, t, ha="center", va="center", fontsize=8.8, fontweight="bold", color=COR[cls],
-               bbox=dict(boxstyle="round,pad=0.15", fc="white", ec="none", alpha=0.75))
-    for xx, yy, rot in [(0.84, 0.84, "a"), (1.0, 0.25, "b"), (0.0, 0.0, "c")]:
-        m.plot(xx, yy, "o", color=TINTA, ms=5, clip_on=False, zorder=5)
-        m.annotate(rot, (xx, yy), (xx - 0.045 if xx > 0.5 else xx + 0.03, yy + 0.03), fontsize=8.6, fontweight="bold",
-                   color=TINTA, annotation_clip=False)
-    for v in sorted({dif, inteiro, d}):
-        m.axvline(v, color="#BBBBBB", lw=0.5, zorder=0)
-        m.axhline(v, color="#BBBBBB", lw=0.5, zorder=0)
-    ticks = [0, dif, inteiro, d, 1]
-    m.set_xlim(0, 1)
-    m.set_ylim(0, 1)
-    m.set_xticks(ticks, [pct(t) for t in ticks], fontsize=7.4)
-    m.set_yticks(ticks, [pct(t) for t in ticks], fontsize=7.4)
-    m.set_xlabel("% de A encontrado em B", fontsize=8.2)
-    m.set_ylabel("% de B encontrado em A", fontsize=8.2)
-    m.set_aspect("equal")
-    ax.text(0.292, 0.060, "a: exemplo do enunciado (84% × 84%)\nb: petição dentro de autos 4× maiores (100% × 25%)\n"
-                          "c: petições independentes do mesmo modelo (0% × 0%)",
-            transform=ax.transAxes, fontsize=7.4, color=TINTA, va="center", linespacing=1.35)
+    for cor, hachura, pts in regioes:
+        m.add_patch(Polygon(pts, closed=True, facecolor=cor, edgecolor=TINTA, lw=1.0, hatch=hachura))
+    caixa_txt = dict(boxstyle="round,pad=0.2", fc="white", ec="none", alpha=0.85)
+    for xx, yy, t in [(10, 13, "diferente"), (40, 40, "etapa 2\n(embedding)"), (76, 70, "versão"),
+                      (80, 32, "um dentro\ndo outro"), (25, 85, "um dentro\ndo outro")]:
+        m.text(xx, yy, t, ha="center", va="center", fontsize=9.5, weight="bold", color=TINTA, bbox=caixa_txt, zorder=4)
+    for xx, yy, letra in [(85, 85, "a"), (100, 25, "b"), (3, 3, "c")]:
+        m.plot(xx, yy, "o", color=TINTA, ms=6, clip_on=False, zorder=5)
+        m.annotate(letra, (xx, yy), (xx - 5 if xx > 50 else xx + 3, yy + 3 if xx > 50 else yy - 1), fontsize=10, weight="bold", color=TINTA,
+                   annotation_clip=False, zorder=5)
+    ticks = [0, dif, inteiro, d, 100]
+    m.set_xlim(0, 100)
+    m.set_ylim(0, 100)
+    m.set_xticks(ticks, [f"{t}%" for t in ticks], fontsize=9)
+    m.set_yticks(ticks, [f"{t}%" for t in ticks], fontsize=9)
+    m.set_xlabel("% do texto \"caso\" do novo que está no outro", fontsize=10)
+    m.set_ylabel("% do texto \"caso\" do outro que está no novo", fontsize=10)
 
-    xr = 0.562
+    xr, yy = 92, topo - 9
     legenda = [
-        ("versão", f"maior ≥ {pct(d)} e menor ≥ {pct(inteiro)}:\num documento saiu do outro"),
-        ("trecho", f"maior ≥ {pct(d)}, menor < {pct(inteiro)},\num documento ≥ 2× o outro:\ntrecho, se contíguo (senão,\nrevisão)"),
-        ("faixa", f"maior entre {pct(dif)} e {pct(d)}: decide a\ncobertura total = literal + pará-\ngrafos reescritos (embedding,\n"
-                  f"cosseno ≥ {num(L.cosseno_par)}, valor comum)\n"
-                  f"≥ {pct(L.cobertura_versao)} e ≥ {pct(inteiro)} → versão\n"
-                  f"< {pct(L.cobertura_diferente)} mesmo com {num(L.cosseno_par_minimo)}\n  → diferente\n"
-                  f"{pct(L.cobertura_diferente)}–{pct(L.cobertura_versao)} → em revisão"),
-        ("diferente", f"os dois < {pct(dif)}: só vocabulário\nou modelo em comum (citação\nexplícita vira o vínculo \"cita\")"),
+        (VERDE, None, "versão", ["um ≥ 60% e o outro ≥ 50%"]),
+        (ROSA, None, "um dentro do outro", ["um ≥ 60% e o outro < 50%, com um documento", "pelo menos 2× maior que o outro",
+                                            "(maior < 2× o menor → etapa 2)",
+                                            "é cópia se o menor estiver inteiro no maior; senão, versão"]),
+        ("#DCE8FA", "//", "etapa 2 (embedding)", ["maior de 20% até < 60%: soma os parágrafos",
+                                                  "reescritos aos dois percentuais",
+                                                  "≥ 65% e ≥ 50% → versão",
+                                                  "os dois < 55% → diferente",
+                                                  "o resto → juiz LLM"]),
+        (CINZA, None, "diferente", ["os dois < 20%"]),
     ]
-    yy = 0.585
-    for cls, texto in legenda:
-        ax.add_patch(Rectangle((xr, yy - 0.015), 0.009, 0.015, transform=ax.transAxes, facecolor=COR[cls], edgecolor="none"))
-        ax.text(xr + 0.014, yy, texto, transform=ax.transAxes, fontsize=7.6, va="top", color=TINTA, linespacing=1.3)
-        yy -= 0.012 + 0.0205 * (texto.count("\n") + 1)
-    ax.text(xr, yy - 0.004, "B3. Versão de quê?", transform=ax.transAxes, fontsize=9, fontweight="bold")
-    for k, (cond, res) in enumerate([("tipo de peça diferente", "outra peça do caso"),
-                                     ("outras partes (CPF) ou processo", "outra instância do modelo"),
-                                     ("mesmo tipo, partes e processo", "mesma peça (substitui)")]):
-        base = yy - 0.030 - k * 0.037
-        ax.text(xr, base, cond, transform=ax.transAxes, fontsize=7.6, va="center", color=TINTA)
-        ax.text(xr + 0.008, base - 0.018, "→ " + res, transform=ax.transAxes, fontsize=7.6, va="center", fontweight="bold", color=COR["versão"])
+    for cor, hachura, titulo, linhas in legenda:
+        ax.add_patch(Rectangle((xr, yy - 1.6), 4, 3.2, facecolor=cor, edgecolor=TINTA, lw=1.0, hatch=hachura, zorder=2))
+        ax.text(xr + 6, yy, titulo, ha="left", va="center", fontsize=10.5, weight="bold", color=TINTA)
+        for k, t in enumerate(linhas):
+            ax.text(xr + 6, yy - LINHA * (k + 1), t, ha="left", va="center", fontsize=10, color=TINTA)
+        yy -= LINHA * (len(linhas) + 1) + 3
+    for k, t in enumerate(["a: petição com 3 de 20 parágrafos trocados e o valor alterado (≈ 85% × 85%)",
+                           "b: petição juntada dentro de autos 4× maiores (100% × 25%)",
+                           "c: contestação × inicial do mesmo caso (perto de 0% × 0%)"]):
+        ax.text(10, y_m - 14 - LINHA * k, t, ha="left", va="center", fontsize=10, color=TINTA)
 
 
-# ── C. Ação ──────────────────────────────────────────────────────────────────
-def painel_acao(ax, x0=0.744, w=0.246):
-    titulo_painel(ax, x0, "C. Ação por resultado")
-    cartoes = [
-        ("cópia", "Cópia", "agrupa · avisa \"já existe\" · reaproveita\nas análises · não apaga nada"),
-        ("versão", "Versão · mesma peça", "liga à anterior · diff com página ·\nalerta de valor, data, CPF, negação"),
-        ("versão", "Versão · outra peça ou instância", "vínculo · não substitui"),
-        ("trecho", "Trecho", "\"contém, págs. x–y\""),
-        ("diferente", "Diferente", "vínculo \"cita\" ou \"reaproveita trechos\""),
-        ("revisão", "Em revisão", "1 item de fila por documento, com\nos motivos · o revisor escolhe a classe"),
-    ]
-    topo = 0.860
-    for cls, titulo, corpo in cartoes:
-        topo = caixa(ax, x0, topo, w, titulo, corpo, cor=COR[cls], fundo=FUNDO[cls]) - 0.011
-    seta(ax, x0 + w / 2, topo + 0.011, x0 + w / 2, topo - 0.014, cor=COR["revisão"])
-    caixa(ax, x0, topo - 0.014, w, "Calibração", "decisões do revisor + auditoria aleatória\nde 1% das automáticas → rótulos → cortes",
-          cor=COR["revisão"])
-    caixa(ax, x0, 0.205, 0.119, "LLM (opcional)", "resume os trechos\nalterados · pseudo-\nnimizado · nunca\ndecide a classe",
-          tracejada=True, tam=8.0)
-    caixa(ax, x0 + 0.127, 0.205, 0.119, "Cache", "por parágrafo: uma\nnova versão paga\nsó o que mudou", tam=8.0)
-
-
-def main(caminho=ENTREGA / "anexo_visual_questao1.pdf", png=None):
-    fig = plt.figure(figsize=(11.69, 8.27))
+def main():
+    pdf = ENTREGA / "anexo_visual_questao1.pdf"
+    png = sys.argv[1] if len(sys.argv) > 1 else None
+    X0, X1, Y0, Y1 = 0, 180, -120, 262
+    fig = plt.figure(figsize=(13, 13 * (Y1 - Y0) / (X1 - X0)))
     ax = fig.add_axes([0, 0, 1, 1])
+    ax.set_xlim(X0, X1)
+    ax.set_ylim(Y0, Y1)
     ax.axis("off")
-    fig.text(0.012, 0.962, "Questão 1 — Comparação de documentos parecidos", fontsize=15, fontweight="bold", color=TINTA)
-    fig.text(0.012, 0.930, "Cada documento novo é comparado com os do mesmo caso: quanto do texto próprio de cada um está escrito igual "
-                           "no outro, nos dois sentidos.\nVocabulário jurídico, texto de modelo do escritório e citações não contam.",
-             fontsize=9.2, color=COR["fluxo"], va="center", linespacing=1.35)
-    for x in (0.243, 0.735):
-        ax.plot([x, x], [0.03, 0.90], color="#DDDDDD", lw=1, transform=ax.transAxes)
-    painel_fluxo(ax)
-    painel_decisao(ax, fig)
-    painel_acao(ax)
-    fig.savefig(caminho)
+    ax.add_patch(Rectangle((X0, Y0), X1 - X0, Y1 - Y0, facecolor=FUNDO, zorder=-2))
+    for x in range(X0, X1 + 1, 10):
+        ax.plot([x, x], [Y0, Y1], color=GRADE, lw=0.8, zorder=-1)
+    for y in range(Y0 + 8, Y1 + 1, 10):
+        ax.plot([X0, X1], [y, y], color=GRADE, lw=0.8, zorder=-1)
+
+    # Cliente → casos → documentos do caso + documento novo
+    caixa(ax, 48, 254, 20, 6.5, LILAS, "Cliente", 12)
+    casos = [18, 38, 58, 78, 98]
+    for k, x in enumerate(casos, 1):
+        caixa(ax, x, 238, 15, 6, ROSA, f"Caso {k}")
+        ramo(ax, (48, 250.75), (x, 241))
+    docs = [98, 116, 134]
+    for k, x in enumerate(docs, 1):
+        caixa(ax, x, 222, 14, 6, VERDE, f"Doc {k}")
+        ramo(ax, (98, 235), (x, 225))
+    ax.text(146, 222, "···", ha="center", va="center", fontsize=20, color=TINTA, weight="bold")
+    ax.text(155, 222.3, "+", ha="center", va="center", fontsize=26, color=TINTA)
+    caixa(ax, 168, 222, 18, 6, AZUL, "Doc Novo", 11, "bold")
+    ax.plot([10.5, 85.5], [233.5, 233.5], color=SETA, lw=1.2, zorder=1)
+    for x in (10.5, 85.5):
+        ax.plot([x, x], [233.5, 234.8], color=SETA, lw=1.2, zorder=1)
+    rotulo(ax, 48, 231, "outros casos do cliente", ha="center")
+
+    # Coluna principal
+    xa, wa = 30, 80               # caixas da coluna principal: x de 30 a 110
+    cx = xa + wa / 2
+    seta(ax, [(168, 219), (168, 214), (cx, 214), (cx, 210)])
+    fim = passo(ax, xa, 210, wa, "Ler o PDF página a página", ["página escaneada vai para OCR"])
+    seta(ax, [(xa + wa, (210 + fim) / 2), (120, (210 + fim) / 2)])
+    caixa(ax, 148, (210 + fim) / 2, 56, 7, LARANJA, "página que não pôde ser lida → revisão humana", 9.5)
+    seta(ax, [(cx, fim), (cx, fim - 4)])
+    fim = passo(ax, xa, fim - 4, wa, "Extrair três coisas", [
+        "1- hashes: arquivo, texto, texto normalizado, imagens, assinatura",
+        "2- palavras em grupos de 5 seguidas, com a página",
+        "3- partes (CPF/CNPJ), processo e tipo de peça"])
+    seta(ax, [(cx, fim), (cx, fim - 4)])
+    topo_et = fim - 4
+    fim = passo(ax, xa, topo_et, wa, "Etiquetar cada grupo de 5 palavras", [
+        "modelo: igual em ≥ 5 outros casos do cliente",
+        "citação: entre aspas ou depois de \"in verbis\"",
+        "caso: o resto; é o que conta na comparação"])
+    meio_et = (topo_et + fim) / 2
+    seta(ax, [(15, 233.5), (15, meio_et), (xa, meio_et)], tracejada=True)
+    rotulo(ax, 12.5, (233.5 + meio_et) / 2, "grupos de palavras dos outros casos (só para etiquetar)", ha="center", rot=90)
+    seta(ax, [(cx, fim), (cx, fim - 4)])
+    topo_cmp = fim - 4
+    fim = passo(ax, xa, topo_cmp, wa, "Comparar com cada doc do mesmo caso", [])
+    meio_cmp = (topo_cmp + fim) / 2
+    seta(ax, [(116, 219), (116, meio_cmp), (xa + wa, meio_cmp)], tracejada=True)
+    rotulo(ax, 118.5, (219 + meio_cmp) / 2 + 6, "um de cada vez", rot=90)
+
+    # Hashes iguais?
+    seta(ax, [(cx, fim), (cx, fim - 3)])
+    yh = fim - 3 - 6
+    losango(ax, cx, yh, 44, 12, "hashes\niguais?")
+    seta(ax, [(cx + 22, yh), (123, yh)])
+    rotulo(ax, cx + 24, yh + 1.8, "sim")
+    caixa(ax, 150, yh, 54, 16, AZUL, "Cópia; a comparação com esse doc termina\narquivo igual, ou texto, imagens e\nassinatura iguais → exata\ntexto igual com imagem ou assinatura diferente,\nou só o normalizado igual → com ressalva", 9.5)
+
+    # Etapa 1
+    seta(ax, [(cx, yh - 6), (cx, yh - 10)])
+    rotulo(ax, cx + 1.5, yh - 8, "não")
+    topo1 = yh - 10
+    fim = passo(ax, xa, topo1, wa, "Etapa 1: semelhança de texto", [
+        "trecho igual: palavras seguidas idênticas, na mesma ordem",
+        "conta só texto \"caso\"; trecho vale com ≥ 15 palavras",
+        "dois percentuais: % do novo no outro e % do outro no novo"])
+    seta(ax, [(xa + wa, (topo1 + fim) / 2), (120, (topo1 + fim) / 2)])
+    caixa(ax, 148, (topo1 + fim) / 2, 56, 10, LARANJA, "texto de OCR com só trocas de leitura\nou número divergente → revisão humana", 9.5)
+
+    # Maior percentual entre 20% e 60%?
+    seta(ax, [(cx, fim), (cx, fim - 3)])
+    yd = fim - 3 - 10
+    losango(ax, cx, yd, 64, 20, "maior % de 20% até < 60%,\nou um ≥ 60% e o outro < 50%\ncom o maior < 2× o menor?")
+    # não → decide pelos percentuais da etapa 1
+    seta(ax, [(cx, yd - 10), (cx, yd - 14)])
+    rotulo(ax, cx + 1.5, yd - 12, "não")
+    topo3a = yd - 14
+    fim3a = passo(ax, xa, topo3a, wa, "Etapa 3: decidir pelos dois percentuais", [
+        "um ≥ 60% e o outro ≥ 50% → versão",
+        "um ≥ 60%, o outro < 50% e um doc ≥ 2× o outro",
+        "    → um dentro do outro (espalhado → juiz)",
+        "os dois < 20% → diferente",
+        "cliente com < 20 casos: versão só com os dois ≥ 90%",
+        "< 10 grupos \"caso\": texto inteiro, se mesma peça",
+        "o resto → juiz LLM"])
+    # sim → etapa 2 → decide pelos percentuais somados
+    xb, wb = 118, 58
+    seta(ax, [(cx + 32, yd), (xb, yd)])
+    rotulo(ax, cx + 33, yd + 1.8, "sim")
+    topo2 = yd + 9
+    fim2 = passo(ax, xb, topo2, wb, "Etapa 2: semelhança de sentido", [
+        "embedding nos parágrafos sem trecho igual",
+        "reescrito = cosseno ≥ 0,875",
+        "    e mesmos valores e datas",
+        "soma aos dois percentuais"])
+    seta(ax, [(xb + wb / 2, fim2), (xb + wb / 2, fim2 - 4)])
+    fim3b = passo(ax, xb, fim2 - 4, wb, "Etapa 3: decidir (% somados)", [
+        "um ≥ 65% e o outro ≥ 50% → versão",
+        "os dois < 55%, mesmo com cosseno ≥ 0,725",
+        "    → diferente",
+        "cliente com < 20 casos: versão → juiz LLM",
+        "qualquer outra combinação → juiz LLM"])
+    seta(ax, [(xb + wb / 2, fim3b), (xb + wb / 2, fim3b - 4)])
+    topo_juiz = fim3b - 4
+    fim3b = passo(ax, xb, topo_juiz, wb, "Juiz LLM", [
+        "recebe os parágrafos sem trecho igual (nomes",
+        "    e CPF mascarados), os dois % e onde ficam",
+        "    os trechos iguais",
+        "\"B é A editado ou outro documento?\"",
+        "3 respostas iguais → versão ou diferente",
+        "divergência ou \"incerto\" → revisão"], AMARELO)
+
+    # Etapa 3 da esquerda: o resto vai ao juiz
+    meio_juiz = (topo_juiz + fim3b) / 2
+    seta(ax, [(xa + wa, fim3a + 3.5), (114, fim3a + 3.5), (114, meio_juiz), (xb, meio_juiz)])
+
+    # Registro no caso: as setas chegam numa barra acima da tabela
+    topo_r = min(fim3a, fim3b) - 13
+    barra = topo_r + 7
+    ax.plot([10, 166], [barra, barra], color=SETA, lw=2.2, zorder=1)
+    seta(ax, [(cx, fim3a), (cx, barra)])
+    seta(ax, [(xb + wb / 2, fim3b), (xb + wb / 2, barra)])
+    seta(ax, [(176, yh), (178, yh), (178, barra), (166, barra)])
+    ax.text(10, topo_r + 3, "Registro no caso (nada é apagado)", ha="left", va="center", fontsize=11.5, weight="bold",
+            color=TINTA)
+    linhas = [
+        (AZUL, "Cópia", ["exata ou com ressalva; marcada como cópia e ligada à original"]),
+        (VERDE, "Versão", ["tipo de peça, partes e processo iguais → mesma peça: as duas no mesmo grupo de versões",
+                           "tipo de peça diferente → versão de outra peça do caso: as duas só ficam ligadas",
+                           "partes ou processo diferentes → mesmo modelo em outro processo: só ligadas, com aviso",
+                           "tipo de peça não lido → ligada como versão, sem afirmar que substitui",
+                           "versão de mais de um doc → ligada a todos; atual = a mais recente pela data de protocolo (sem data, não se afirma)",
+                           "registra onde estão as diferenças: parágrafos novos, removidos e palavras trocadas, com a página"]),
+        (ROSA, "Um dentro\ndo outro", ["cópia, se o menor estiver inteiro, palavra por palavra (todo o texto), no maior; senão, versão", "ligado ao outro, com as páginas onde está"]),
+        (CINZA, "Diferente", ["sem ligação"]),
+        (LARANJA, "Revisão", ["juiz LLM sem 3 respostas iguais ou \"incerto\"; OCR com só trocas de leitura (provável cópia) ou com número", "diferente; página que não pôde ser lida → fila de um revisor, que escolhe uma das três classes"]),
+    ]
+    xl, wl, wt = 10, 22, 166 - 32
+    y = topo_r
+    for cor, classe, textos in linhas:
+        h = 3.6 + LINHA * len(textos)
+        caixa(ax, xl + wl / 2, y - h / 2, wl, h, cor, classe, 10.5, "bold")
+        ax.add_patch(Rectangle((xl + wl, y - h), wt, h, facecolor=BRANCO, edgecolor=TINTA, lw=1.6, zorder=2))
+        for k, t in enumerate(textos):
+            ax.text(xl + wl + 2, y - 3.3 - LINHA * k, t, ha="left", va="center", fontsize=10, color=TINTA, zorder=3)
+        y -= h + 1.5
+
+    mapa(ax, fig, y - 4, (X0, X1, Y0, Y1))
+    fig.savefig(pdf, facecolor=FUNDO)
     if png:
-        fig.savefig(png, dpi=110)
-    print("gerado:", caminho)
+        fig.savefig(png, dpi=100, facecolor=FUNDO)
+    print("gerado:", pdf)
 
 
 if __name__ == "__main__":
